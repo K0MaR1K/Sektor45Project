@@ -20,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="15dp"
-        android:paddingHorizontal="20dp">
+        android:paddingHorizontal="20dp"
+        android:layout_marginVertical="20dp">
 
         <ImageButton
             android:id="@+id/button_1"
@@ -75,5 +76,15 @@
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/go_to_welcome_screen_button"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Odustani"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:padding="15dp"/>
 
 </LinearLayout>

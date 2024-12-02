@@ -100,6 +100,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton btnCategory2;
     ImageButton btnCategory3;
     ImageButton btnCategory4;
+    Button btnGoToWelcomeScreen;
     ImageButton btnGoToCategoriesScreen;
     ImageButton btnGoToCategoriesScreen1;
     ImageButton  btnPay;
@@ -168,6 +169,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         btnPay = findViewById(R.id.button_pay);
         btnCancel = findViewById(R.id.button_back);
+        btnGoToWelcomeScreen = findViewById(R.id.go_to_welcome_screen_button);
         btnGoToCategoriesScreen = findViewById(R.id.go_to_categories_screen_button);
         btnGoToCategoriesScreen1 = findViewById(R.id.go_to_categories_screen_button1);
         btnCategory1 = findViewById(R.id.button_1);
@@ -177,6 +179,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         btnPay.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
+        btnGoToWelcomeScreen.setOnClickListener(this);
         btnGoToCategoriesScreen.setOnClickListener(this);
         btnGoToCategoriesScreen1.setOnClickListener(this);
         btnCategory1.setOnClickListener(this);
@@ -963,9 +966,15 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             btnCancel.setVisibility(View.INVISIBLE);
             billTotal = BigDecimal.ZERO;
             billDataEntryList.clear(); */
+        } else if(id == R.id.go_to_welcome_screen_button){
+            View categoriesScreen = findViewById(R.id.categories_screen);
+            categoriesScreen.setVisibility(View.INVISIBLE);
+            View welcomeScreen = findViewById(R.id.welcome_screen);
+            welcomeScreen.setVisibility(View.VISIBLE);
+
         } else if(id == R.id.button_1 || id == R.id.button_2 || id == R.id.button_3 || id == R.id.button_4) {
             View categoriesScreen = findViewById(R.id.categories_screen);
-            categoriesScreen.setVisibility(View.VISIBLE);
+            categoriesScreen.setVisibility(View.INVISIBLE);
             View chargesScreen = findViewById(R.id.charges_screen);
             btnCategory1.setVisibility(View.INVISIBLE);
             btnCategory2.setVisibility(View.INVISIBLE);
