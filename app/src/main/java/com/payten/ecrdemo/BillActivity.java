@@ -168,21 +168,9 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         btnPay = findViewById(R.id.button_pay);
         btnCancel = findViewById(R.id.button_back);
-        btnGoToCategoriesScreen = findViewById(R.id.go_to_categories_screen_button);
-        btnGoToCategoriesScreen1 = findViewById(R.id.go_to_categories_screen_button1);
-        btnCategory1 = findViewById(R.id.button_1);
-        btnCategory2 = findViewById(R.id.button_2);
-        btnCategory3 = findViewById(R.id.button_3);
-        btnCategory4 = findViewById(R.id.button_4);
 
         btnPay.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
-        btnGoToCategoriesScreen.setOnClickListener(this);
-        btnGoToCategoriesScreen1.setOnClickListener(this);
-        btnCategory1.setOnClickListener(this);
-        btnCategory2.setOnClickListener(this);
-        btnCategory3.setOnClickListener(this);
-        btnCategory4.setOnClickListener(this);
 
 
         billText = findViewById(R.id.BillView);
