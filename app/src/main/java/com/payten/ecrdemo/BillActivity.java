@@ -237,9 +237,9 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             it.setClassName("com.payten.service","com.payten.service.PaytenEcrService");
             bindService(it,connection, Context.BIND_AUTO_CREATE);
         }
-        addItemToBill("Skolarina", 7333.0f);
-        addItemToBill("Porez", 6720.0f);
-        addItemToBill("Kazna", 320.0f);
+        addItemToBill("Skolarina", 700.0f);
+        addItemToBill("Porez", 6730.0f);
+        addItemToBill("Kazna", 300.0f);
 
         if (billTotal.compareTo(BigDecimal.ZERO) > 0) {
             setBillTableHeader();
@@ -290,7 +290,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         TextView total_text = findViewById(R.id.total_amount);
         TextView donation_text = findViewById(R.id.round_amount);
         total_text.setText(formatAmount(billTotal, true));
-        donation = BigDecimal.valueOf(Math.ceil(billTotal.doubleValue()/ 100.0) * 100);
+        donation = BigDecimal.valueOf(Math.ceil((billTotal.doubleValue() + 0.01) / 100) * 100);
         donation_text.setText(formatAmount(donation, true));
     }
 
