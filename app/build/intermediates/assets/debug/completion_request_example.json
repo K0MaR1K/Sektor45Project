@@ -1,0 +1,31 @@
+{
+  "header":{
+    "length":"446",
+    "hash":"XXX",
+    "version":"01"
+  },
+
+  "request":{
+    "financial":{
+      "transaction":"preauth-completion",
+
+      "id": {
+        "ecr": "000001",
+        "authorization": "960600",
+        "reference": "444404204444",
+        "controlNumber": "7325"
+      },
+
+      "amounts": {
+        "base": "14.30",
+        "original": "15.67",
+        "currencyCode": "RSD"
+      },
+
+      "options":{
+        "language": "sr",
+        "print": "true"
+      }
+    }
+  }
+}

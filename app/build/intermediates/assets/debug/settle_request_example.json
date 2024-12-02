@@ -1,0 +1,13 @@
+{
+	"header":{
+		"length":"74",
+		"hash":"XXX",
+		"version":"01"
+	},
+	
+	"request":{			
+		"financial":{			
+			"transaction":"settlement"
+		}
+	}
+}

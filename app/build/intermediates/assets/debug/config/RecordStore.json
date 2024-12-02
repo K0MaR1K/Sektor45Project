@@ -1,0 +1,113 @@
+{
+   "title":"Record Store",
+   "language":"sr",
+   "currency":"RSD",
+   "colorScheme":"green",
+   "items":[
+      {
+         "itemName":"Abbey Road",
+         "itemPrice":"2450.00",
+         "itemImage":"abbey.jpg"
+      },
+      {
+         "itemName":"Beggar's Banquet",
+         "itemPrice":"2130.00",
+         "itemImage":"beggars.jpg"
+      },
+      {
+         "itemName":"A Night at the Opera",
+         "itemPrice":"2500.00",
+         "itemImage":"opera.jpg"
+      },
+	  {
+         "itemName":"Aladdin Sane",
+         "itemPrice":"2270.00",
+         "itemImage":"aladdin.jpg"
+      },
+	  {
+         "itemName":"Dark Side of the Moon",
+         "itemPrice":"2110.00",
+         "itemImage":"moon.jpg"
+      },
+	  {
+         "itemName":"Tango in the Night",
+         "itemPrice":"2350.00",
+         "itemImage":"tango.jpg"
+      },
+      {
+         "itemName":"Brothers in Arms",
+         "itemPrice":"2380.00",
+         "itemImage":"brothers.jpg"
+      },
+	  {
+         "itemName":"Master of Puppets",
+         "itemPrice":"2240.00",
+         "itemImage":"master.jpg"
+      },
+	  {
+         "itemName":"Velvet Underground",
+         "itemPrice":"2220.00",
+         "itemImage":"velvet.png"
+      },
+      {
+         "itemName":"Heaven and Hell",
+         "itemPrice":"2210.00",
+         "itemImage":"heaven_hell.jpg"
+      },
+      {
+         "itemName":"Led Zeppelin IV",
+         "itemPrice":"2160.00",
+         "itemImage":"zeppelin_iv.jpg"
+      },
+      {
+         "itemName":"Are You Experienced",
+         "itemPrice":"2190.00",
+         "itemImage":"experienced.jpg"
+      },
+      {
+         "itemName":"Never Mind the Bollocks",
+         "itemPrice":"1999.00",
+         "itemImage":"bollocks.png"
+      },
+      {
+         "itemName":"Nevermind",
+         "itemPrice":"2250.00",
+         "itemImage":"nevermind.jpg"
+      },
+      {
+         "itemName":"Hounds of Love",
+         "itemPrice":"2180.00",
+         "itemImage":"hounds.png"
+      },
+      {
+         "itemName":"Doors",
+         "itemPrice":"2310.00",
+         "itemImage":"doors.jpg"
+      },
+      {
+         "itemName":"Pearl",
+         "itemPrice":"2380.00",
+         "itemImage":"pearl.jpg"
+      },
+      {
+         "itemName":"Disintegration",
+         "itemPrice":"2300.00",
+         "itemImage":"disintegration.jpg"
+      },
+      {
+         "itemName":"Maggot Brain",
+         "itemPrice":"2100.00",
+         "itemImage":"maggot.jpg"
+      },
+      {
+         "itemName":"Arctic Monkeys (A.M.)",
+         "itemPrice":"2290.00",
+         "itemImage":"am.jpg"
+      },
+      {
+         "itemName":"Desire",
+         "itemPrice":"2320.00",
+         "itemImage":"desire.jpg"
+      }
+   ]
+}

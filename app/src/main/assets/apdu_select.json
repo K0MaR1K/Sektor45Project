@@ -1,0 +1,17 @@
+{
+	"header":{
+		"length":154,
+		"hash":"85a2afb49c79e2d8ca0a358c98ca30870fc2212b085483ca6d646c98e055fe4173c6608852a7c8fb02b69dc271023035c125be1b70b59f7e70fc2423dd57eaaa",
+		"version":"1"
+	},
+	
+	"request":{		
+		"command":{
+			"apdu":{
+				"action": "command",
+				"destination": "SAM1",
+				"data": "AKQEABCgAAAHSEZKSS1UYXhDb3Jl"
+			}
+		}
+	}
+}

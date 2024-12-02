@@ -1,0 +1,27 @@
+{
+	"header":{
+		"length":"282",
+		"hash":"XXX",
+		"version":"01"
+	},
+
+	"request":{
+		"financial":{
+			"transaction":"void",
+
+			"id": {
+				"invoice": "95"
+			},
+
+			"amounts": {
+				"base": "1.23",
+				"currencyCode": "RSD"
+			},
+
+			"options":{
+				"language": "sr",
+				"print": "true"
+			}
+		}
+	}
+}

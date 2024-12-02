@@ -1,0 +1,29 @@
+{
+	"header":{
+		"length":"259",
+		"hash":"XXX",
+		"version":"01"
+	},
+	
+	"request":{			
+		"financial":{			
+			"transaction":"sale",
+			
+			"id": {
+				"XXXecr": "000008",
+				"XXXacquirer": "AQ2",
+				"XXXcardName": "kukuruz|B1|kokice"
+			},
+			
+			"amounts": {
+				"base": "1.23",
+				"currencyCode": "RSD"
+			},
+
+			"options":{
+				"language": "sr",
+				"print": "true"
+			}
+		}
+	}
+}

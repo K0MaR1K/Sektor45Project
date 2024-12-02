@@ -1,0 +1,16 @@
+{
+	"header":{
+		"length":300,
+		"hash":"9397e30d8f92da29d9c1016a3e0eab55c7874f5b1cc67e400ecfac233f82889234f41328b2df08066b3e692dcb6f028d56b0fd009fca18fdac9b5669f6775e71",
+		"version":"1"
+	},
+	
+	"request":{		
+		"command":{
+			"printer":{
+				"type":"QR",
+				"data":"VGVzdCBRUiBjb2RlIHByaW50aW5nLiAKVGhpcyBpcyBzb21lIGxvbmcgdGVzdCB0aGF0IGlzIGdlbmVyYXRlZCBieSBkdW1teSBFQ1IgYXBwbGljYXRpb24uIApJdCBpcyB0aGVuIEJhc2U2NCBlbmNvZGVkIGFuZCBlbmNhcHN1bGF0ZWQgaW4gSlNPTiBFQ1IgcmVxdWVzdC4K"
+			}
+		}
+	}
+}

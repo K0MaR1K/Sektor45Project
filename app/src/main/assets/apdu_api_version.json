@@ -1,0 +1,17 @@
+{
+	"header":{
+		"length":134,
+		"hash":"089bb5ef0f16a0b672900ebfe944fe49ef180ef562180dc2360ffeb44595ec4a8e23da2d8e537c9bfb7308604fe3e4406e16c1dd62c1022a72fd26e90d979f2e",
+		"version":"1"
+	},
+	
+	"request":{		
+		"command":{
+			"apdu":{
+				"action": "command",
+				"destination": "SAM1",
+				"data": "iEAEAAACAF2/yc0Er53HbFD6P/VNMtGRCw0uHsWvl+rj5xp0I8zgZtbiZCVYOMHbreYYnKpsL/Ni2sbrvTorp2j6RDO0fWj/ZWZw0PURaT125K1Zxg2UidfrQZlw7RmpZK/SavCbxMPYcNb+n9E1w1gY4C+fPdlMHFcZRvG8Rm/eHfaoQZTXZ3Z/XbAsnI4g7g99yaHE1T/oLGVlyFhECzZmuE2FJDLAXD1WxNmritxpKiVltGPW2sHqS7QCNJSnyKMis4menQscC0oWViSZFc3NjFgt+m4/p17RCPsNqDBFg35pCOJDGqRLLrhL9O3sbDsNLYySNxOq0GuHrcPoIZtbTH5hI7JbTUSYoL+Ag/umnCmwrh0vDA+1YSn+9tS5/iG17kFviL4vvl7GbpZ9c/P+M/RPQLM1l5PzAntpCacP3iRVWWcn0wLzk7Way5/usVxfaVZPjSX4wK7GdlsrRw8MIw7A6eiXJMtKmEBh3GAaY4brA9n10djo1NvcFP3zf5kVd7Bu+NWQYgYaktNdWCMnoqwVmYTWC6bDw7QkgL2eDrWW+nBLV4TifFolUyHElHuT5rZBmNixmvmgnAicK2u2ymN2qQ8ld4E/irUACEDAfZC0r1/GxycoZ1e3C48yFY0D/TImpknAVT2kgZ9MxSPuptLYhZCi5opsQ16SXxHnPcz1hceEAAA="
+			}
+		}
+	}
+}

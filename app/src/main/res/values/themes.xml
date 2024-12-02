@@ -1,0 +1,240 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/dark_gray</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorButtonNormal">@color/anthracite</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>-->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="OrangeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/dark_gray</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorButtonNormal">@color/anthracite</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MagentaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/magenta</item>
+        <item name="colorOnPrimary">@color/light_gray</item>
+        <item name="colorSecondary">@color/dark_gray</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorButtonNormal">@color/anthracite</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="GreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/dark_green_3</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorButtonNormal">@color/dark_green_2</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TealTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/teal_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorButtonNormal">@color/teal_dark</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="PurpleTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorOnPrimary">@color/light_purple</item>
+        <item name="colorSecondary">@color/dark_purple</item>
+        <item name="colorOnSecondary">@color/light_purple</item>
+        <item name="colorButtonNormal">@color/deep_purple</item>
+        <item name="colorSurface">@color/light_purple</item>
+        <item name="colorOnSurface">@color/dark_purple</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="YellowTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/dark_gray</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorButtonNormal">@color/anthracite</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="NavyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/dark_gray</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorButtonNormal">@color/anthracite</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="RedTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/dark_gray</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorButtonNormal">@color/anthracite</item>
+        <item name="colorSurface">@color/light_gray</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="GrayTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/medium_gray</item>
+        <item name="colorOnPrimary">@color/dark_gray</item>
+        <item name="colorSecondary">@color/light_gray</item>
+        <item name="colorOnSecondary">@color/dark_gray</item>
+        <item name="colorButtonNormal">@color/medium_light_gray</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="LilacTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/lilac_dark</item>
+        <item name="colorOnPrimary">@color/light_gray</item>
+        <item name="colorSecondary">@color/lilac_light</item>
+        <item name="colorOnSecondary">@color/gray</item>
+        <item name="colorButtonNormal">@color/lilac_medium</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CyanTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/cyan_dark</item>
+        <item name="colorOnPrimary">@color/light_gray</item>
+        <item name="colorSecondary">@color/cyan_light</item>
+        <item name="colorOnSecondary">@color/gray</item>
+        <item name="colorButtonNormal">@color/cyan_medium</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/dark_gray</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/drawerStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:itemBackground">@color/light_gray</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="drawerStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+
+
+</resources>

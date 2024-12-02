@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="navy">#1f3566</color>
+    <color name="blue">#025BFF</color>
+    <color name="teal_dark">#034949</color>
+    <color name="teal">#055757</color>
+    <color name="teal_light">#04BCAA</color>
+    <color name="anthracite">#23263c</color>
+    <color name="dark_gray">#191C2F</color>
+    <color name="gray">#5E5E5E</color>
+    <color name="medium_gray">#C7C7C7</color>
+    <color name="medium_light_gray">#D7D8D8</color>
+    <color name="light_gray">#E4E6E6</color>
+    <color name="dark_green_1">#006648</color>
+    <color name="dark_green_2">#021800</color>
+    <color name="dark_green_3">#010E00</color>
+    <color name="green">#52ae30</color>
+    <color name="light_green">#ADEC96</color>
+    <color name="red">#b01200</color>
+    <color name="orange">#E65514</color>
+    <color name="magenta">#F852B4</color>
+    <color name="yellow">#fff200</color>
+    <color name="deep_purple">#2C0B2E</color>
+    <color name="dark_purple">#3B0F3E</color>
+    <color name="purple">#6e1c75</color>
+    <color name="semi_light_purple">#9C27B0</color>
+    <color name="light_purple">#D0C5D3</color>
+    <color name="lilac_dark">#C497FF</color>
+    <color name="lilac">#D2B4FA</color>
+    <color name="lilac_medium">#E5D6FD</color>
+    <color name="lilac_light">#E5D8FA</color>
+    <color name="cyan_dark">#00a8e8</color>
+    <color name="cyan">#ADE4FB</color>
+    <color name="cyan_medium">#BAE7FA</color>
+    <color name="cyan_light">#C6E8F6</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="colorCancel">#FF0000</color>
+    <color name="colorDelete">#FF9919</color>
+    <color name="colorConfirm">#46831A</color>
+    <color name="colorAccent">#408cff</color>
+</resources>

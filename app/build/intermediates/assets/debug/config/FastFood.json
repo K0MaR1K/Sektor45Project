@@ -1,0 +1,53 @@
+{
+   "title":"Fast Food",
+   "language":"sr",
+   "currency":"RSD",
+   "colorScheme":"main",
+   "items":[
+      {
+         "itemName":"Hamburger",
+         "itemPrice":"250.00",
+         "itemImage":"hamburger.png"
+      },
+      {
+         "itemName":"French Fries",
+         "itemPrice":"130.00",
+         "itemImage":"french_fries.png"
+      },
+      {
+         "itemName":"Hot Dog",
+         "itemPrice":"200.00",
+         "itemImage":"hot_dog.png"
+      },
+	  {
+         "itemName":"Hamburger Meal",
+         "itemPrice":"500.00",
+         "itemImage":"meal.png"
+      },
+	  {
+         "itemName":"Pizza",
+         "itemPrice":"480.00",
+         "itemImage":"pizza.png"
+      },
+	  {
+         "itemName":"Sandwich",
+         "itemPrice":"220.00",
+         "itemImage":"sandwich.png"
+      },
+      {
+         "itemName":"Fried Chicken",
+         "itemPrice":"480.00",
+         "itemImage":"fried_chicken.png"
+      },
+	  {
+         "itemName":"Chicken Bucket",
+         "itemPrice":"550.00",
+         "itemImage":"chicken_bucket.png"
+      },
+	  {
+         "itemName":"Donut",
+         "itemPrice":"170.00",
+         "itemImage":"donut.png"
+      }
+   ]
+}

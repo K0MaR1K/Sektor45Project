@@ -1,0 +1,27 @@
+{
+  "header":{
+    "length":"306",
+    "hash":"XXX",
+    "version":"01"
+  },
+
+  "request":{
+    "financial":{
+      "transaction":"preauthorization",
+
+      "id": {
+        "ecr": "000001"
+      },
+
+      "amounts": {
+        "base": "15.67",
+        "currencyCode": "RSD"
+      },
+
+      "options":{
+        "language": "en",
+        "print": "true"
+      }
+    }
+  }
+}

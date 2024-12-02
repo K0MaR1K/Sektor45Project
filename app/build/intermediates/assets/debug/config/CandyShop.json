@@ -1,0 +1,53 @@
+{
+   "title":"Candy Shop",
+   "language":"sr",
+   "currency":"RSD",
+   "colorScheme":"lilac",
+   "items":[
+      {
+         "itemName":"Pancakes",
+         "itemPrice":"450.00",
+         "itemImage":"pancake.png"
+      },
+      {
+         "itemName":"Cake Slice",
+         "itemPrice":"130.00",
+         "itemImage":"cake_slice.png"
+      },
+      {
+         "itemName":"Cake Collection",
+         "itemPrice":"500.00",
+         "itemImage":"sweets.png"
+      },
+	  {
+         "itemName":"Cupcake",
+         "itemPrice":"270.00",
+         "itemImage":"cupcake.png"
+      },
+	  {
+         "itemName":"Lollipop",
+         "itemPrice":"110.00",
+         "itemImage":"lollipop.png"
+      },
+	  {
+         "itemName":"Macarons",
+         "itemPrice":"350.00",
+         "itemImage":"macarons.png"
+      },
+      {
+         "itemName":"Candy Collection",
+         "itemPrice":"380.00",
+         "itemImage":"candies.png"
+      },
+	  {
+         "itemName":"Choco Donut",
+         "itemPrice":"240.00",
+         "itemImage":"donut_choco.png"
+      },
+	  {
+         "itemName":"Pink Donut",
+         "itemPrice":"220.00",
+         "itemImage":"donut_pink.png"
+      }
+   ]
+}
