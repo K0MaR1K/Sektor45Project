@@ -237,9 +237,9 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             it.setClassName("com.payten.service","com.payten.service.PaytenEcrService");
             bindService(it,connection, Context.BIND_AUTO_CREATE);
         }
-        addItemToBill("Skolarina", 700.0f);
-        addItemToBill("Porez", 6730.0f);
-        addItemToBill("Kazna", 300.0f);
+        addItemToBill("Parking kazna", 1480.0f);
+        addItemToBill("Porez na imovinu", 2680.0f);
+        addItemToBill("Registracija vozila", 14870.0f);
 
         if (billTotal.compareTo(BigDecimal.ZERO) > 0) {
             setBillTableHeader();
@@ -846,6 +846,9 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         TableRow tr=new TableRow(this);
 
         tr.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT));
+        ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) tr.getLayoutParams();
+        mlp.setMargins(0, 5, 0, 0);
+        tr.setLayoutParams(mlp);
 
         TextView b3=new TextView(this);
         b3.setText("Naziv");
@@ -854,18 +857,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         b3.setTypeface(b3.getTypeface(), Typeface.BOLD);
         tr.addView(b3);
 
-        TextView b19 = new TextView(this);
-        b19.setPadding(20, 0, 0, 0);
-        b19.setGravity(Gravity.RIGHT);
-        b19.setTextSize(FONT_SIZE);
-        b19.setText("");
-        b19.setTypeface(b19.getTypeface(), Typeface.BOLD);
-        b19.setTextColor(getColor(R.color.white));
-        tr.addView(b19);
-
         TextView b5=new TextView(this);
-        b5.setPadding(40, 0, 0, 0);
-        b5.setGravity(Gravity.END);
+        b5.setGravity(Gravity.RIGHT);
         b5.setText("Cena");
         b5.setTextColor(getColor(R.color.white));
         b5.setTextSize(FONT_SIZE);
@@ -875,6 +868,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         final View vline = new View(this);
         vline.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, 2));
+        mlp = (ViewGroup.MarginLayoutParams) vline.getLayoutParams();
+        mlp.setMargins(0, 5, 0, 5);
         vline.setBackgroundColor(getColor(R.color.white));
         billTable.addView(vline); // add line below heading
 
@@ -890,6 +885,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
             TableRow tr=new TableRow(this);
             tr.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+            ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) tr.getLayoutParams();
+            mlp.setMargins(0, 5, 0, 5);
 
             TextView b=new TextView(this);
             String str=String.valueOf(bd.item);
@@ -898,17 +895,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             b.setTextColor(getColor(R.color.white));
             tr.addView(b);
 
-            TextView b1 = new TextView(this);
-            b1.setPadding(20, 0, 0, 0);
-            b1.setGravity(Gravity.RIGHT);
-            b1.setTextSize(FONT_SIZE);
-            b1.setText("");
-            b1.setTypeface(b1.getTypeface(), Typeface.BOLD);
-            b1.setTextColor(getColor(R.color.white));
-            tr.addView(b1);
-
             TextView b2=new TextView(this);
-            b2.setPadding(40, 0, 0, LOWER_MARGIN);
             b2.setGravity(Gravity.RIGHT);
             b2.setText(formatAmount(itemTotal, true));
             b2.setTextSize(FONT_SIZE);
@@ -921,6 +908,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         if (billTotal.compareTo(BigDecimal.ZERO) > 0) {
             final View vline = new View(this);
             vline.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, 2));
+            ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) vline.getLayoutParams();
+            mlp.setMargins(0, 15, 0, 0);
             vline.setBackgroundColor(getColor(R.color.white));
 
             billTable.addView(vline); // add line below data
@@ -928,6 +917,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             TableRow tr = new TableRow(this);
 
             tr.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+            mlp = (ViewGroup.MarginLayoutParams) tr.getLayoutParams();
+            mlp.setMargins(0, 5, 0, 5);
 
             TextView b3 = new TextView(this);
             b3.setText("Ukupno");
@@ -936,17 +927,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             b3.setTypeface(b3.getTypeface(), Typeface.BOLD);
             tr.addView(b3);
 
-            TextView b4 = new TextView(this);
-            b4.setPadding(20, 0, 0, 0);
-            b4.setGravity(Gravity.RIGHT);
-            b4.setTextSize(FONT_SIZE);
-            b4.setText("");
-            b4.setTypeface(b4.getTypeface(), Typeface.BOLD);
-            b4.setTextColor(getColor(R.color.white));
-            tr.addView(b4);
-
-            TextView b5 = new TextView(this);
-            b5.setPadding(50, 0, 0, 0);
+            TextView b5 = new TextView( this);
             b5.setGravity(Gravity.RIGHT);
             b5.setText(formatAmount(billTotal, true));
             b5.setTextColor(getColor(R.color.white));

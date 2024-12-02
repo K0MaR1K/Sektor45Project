@@ -1839,6 +1839,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_proceed
 drawable kazne_button
 drawable logo_button
+drawable logo_button1
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1878,6 +1879,7 @@ drawable reg_button
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable unicef_logo
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2057,9 +2059,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
-id donation_image
 id donation_screen
-id donation_text
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2243,7 +2243,6 @@ id rightToLeft
 id right_icon
 id right_side
 id round_amount
-id round_text
 id rounded
 id row_index_key
 id save_non_transition_alpha
