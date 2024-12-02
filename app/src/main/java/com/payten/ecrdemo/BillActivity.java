@@ -99,6 +99,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton btnCategory3;
     ImageButton btnCategory4;
     ImageButton btnGoToCategoriesScreen;
+    ImageButton btnGoToCategoriesScreen1;
     ImageButton  btnPay;
     ImageButton  btnCancel;
     TableLayout billTable;
@@ -171,6 +172,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnPay = findViewById(R.id.button_pay);
         btnCancel = findViewById(R.id.button_back);
         btnGoToCategoriesScreen = findViewById(R.id.go_to_categories_screen_button);
+        btnGoToCategoriesScreen1 = findViewById(R.id.go_to_categories_screen_button1);
         btnCategory1 = findViewById(R.id.button_1);
         btnCategory2 = findViewById(R.id.button_2);
         btnCategory3 = findViewById(R.id.button_3);
@@ -179,6 +181,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnPay.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
         btnGoToCategoriesScreen.setOnClickListener(this);
+        btnGoToCategoriesScreen1.setOnClickListener(this);
         btnCategory1.setOnClickListener(this);
         btnCategory2.setOnClickListener(this);
         btnCategory3.setOnClickListener(this);
@@ -1022,9 +1025,11 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                     break;
             }
 
-        } else if (id == R.id.go_to_categories_screen_button) {
+        } else if (id == R.id.go_to_categories_screen_button || id == R.id.go_to_categories_screen_button1) {
             View welcomeScreen = findViewById(R.id.welcome_screen);
             welcomeScreen.setVisibility(View.INVISIBLE);
+            View chargesScreen = findViewById(R.id.charges_screen);
+            chargesScreen.setVisibility(View.INVISIBLE);
             View categoriesScreen = findViewById(R.id.categories_screen);
             categoriesScreen.setVisibility(View.VISIBLE);
             btnCategory1.setVisibility(View.VISIBLE);

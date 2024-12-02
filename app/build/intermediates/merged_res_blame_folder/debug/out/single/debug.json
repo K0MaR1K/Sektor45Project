@@ -8,12 +8,12 @@
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ecrdemo.png"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_back.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_back.xml"
-    },
-    {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_back.xml"
     },
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
@@ -94,10 +94,6 @@
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_bill_screen.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/bill_screen.xml"
     },
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_evt_script_text_outline.xml.flat",
