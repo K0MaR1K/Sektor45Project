@@ -190,6 +190,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnPay.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
         btnGoToWelcomeScreen.setOnClickListener(this);
+        btnGoToBillScreen.setOnClickListener(this);
         btnGoToCategoriesScreen.setOnClickListener(this);
         btnGoToCategoriesScreen1.setOnClickListener(this);
         btnCategory1.setOnClickListener(this);
@@ -236,9 +237,9 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             it.setClassName("com.payten.service","com.payten.service.PaytenEcrService");
             bindService(it,connection, Context.BIND_AUTO_CREATE);
         }
-        addItemToBill("Crnac", 69.0f);
-        addItemToBill("Kinez", 420.0f);
-        addItemToBill("Amogus", 420.0f);
+        addItemToBill("Skolarina", 7333.0f);
+        addItemToBill("Porez", 6720.0f);
+        addItemToBill("Kazna", 320.0f);
 
         if (billTotal.compareTo(BigDecimal.ZERO) > 0) {
             setBillTableHeader();
@@ -287,9 +288,9 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     private void calculateDonation() {
         TextView total_text = findViewById(R.id.total_amount);
-        TextView donation_text = findViewById(R.id.donation_text);
+        TextView donation_text = findViewById(R.id.round_amount);
         total_text.setText(formatAmount(billTotal, true));
-        donation = BigDecimal.valueOf(Math.ceil(billTotal.doubleValue()));
+        donation = BigDecimal.valueOf(Math.ceil(billTotal.doubleValue()/ 100.0) * 100);
         donation_text.setText(formatAmount(donation, true));
     }
 
@@ -983,7 +984,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             View billScreen = findViewById(R.id.bill_screen);
             billScreen.setVisibility(View.INVISIBLE);
             View chargesScreen = findViewById(R.id.charges_screen);
-            chargesScreen.setVisibility(View.INVISIBLE);
+            chargesScreen.setVisibility(View.VISIBLE);
         } else if(id == R.id.go_to_welcome_screen_button){
             View categoriesScreen = findViewById(R.id.categories_screen);
             categoriesScreen.setVisibility(View.INVISIBLE);
@@ -1027,20 +1028,28 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             btnCategory3.setVisibility(View.VISIBLE);
             btnCategory4.setVisibility(View.VISIBLE);
         } else if (id == R.id.accept_button) {
+            View donationScreen = findViewById(R.id.donation_screen);
+            donationScreen.setVisibility(View.INVISIBLE);
             addItemToBill("Donacija", donation.floatValue() - billTotal.floatValue());
-            View billScreen = findViewById(R.id.bill_screen);
-            billScreen.setVisibility(View.VISIBLE);
-            View donationScreen = findViewById(R.id.donation_screen);
-            donationScreen.setVisibility(View.INVISIBLE);
-        } else if (id == R.id.reject_button) {
-            View billScreen = findViewById(R.id.bill_screen);
-            billScreen.setVisibility(View.VISIBLE);
-            View donationScreen = findViewById(R.id.donation_screen);
-            donationScreen.setVisibility(View.INVISIBLE);
-        }
-        else if (id == R.id.button_pay){
             showResultScreen(true);
             performPayment();
+        } else if (id == R.id.reject_button) {
+            View donationScreen = findViewById(R.id.donation_screen);
+            donationScreen.setVisibility(View.INVISIBLE);
+            showResultScreen(true);
+            performPayment();
+        } else if (id == R.id.go_to_bill_screen_button) {
+            View billScreen = findViewById(R.id.bill_screen);
+            billScreen.setVisibility(View.VISIBLE);
+            View chargesScreen = findViewById(R.id.charges_screen);
+            chargesScreen.setVisibility(View.INVISIBLE);
+        }
+        else if (id == R.id.button_pay){
+            calculateDonation();
+            View billScreen = findViewById(R.id.bill_screen);
+            billScreen.setVisibility(View.INVISIBLE);
+            View donationScreen = findViewById(R.id.donation_screen);
+            donationScreen.setVisibility(View.VISIBLE);
         }
         else if (id == R.id.button_Print){
             ArrayList<EcrJsonReq.PrintLines> lines = new ArrayList<>();
