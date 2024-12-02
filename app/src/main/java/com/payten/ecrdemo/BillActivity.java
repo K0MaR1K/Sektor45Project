@@ -170,7 +170,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnCancel = findViewById(R.id.button_back);
         btnGoToWelcomeScreen = findViewById(R.id.go_to_welcome_screen_button);
         btnGoToCategoriesScreen = findViewById(R.id.go_to_categories_screen_button);
-        btnGoToCategoriesScreen1 = findViewById(R.id.accept_button);
+        btnGoToCategoriesScreen1 = findViewById(R.id.back_to_categories_button);
         btnCategory1 = findViewById(R.id.button_1);
         btnCategory2 = findViewById(R.id.button_2);
         btnCategory3 = findViewById(R.id.button_3);
