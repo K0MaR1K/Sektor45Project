@@ -1822,6 +1822,7 @@ int drawable evt_replay 0x7f070065
 int drawable evt_script_text_outline 0x7f070066
 int drawable ic_arrow_previous 0x7f070067
 int drawable ic_arrow_right 0x7f070068
+int drawable ic_back 0x7f070098
 int drawable ic_cancel 0x7f070069
 int drawable ic_clock_black_24dp 0x7f07006a
 int drawable ic_confirm 0x7f07006b
@@ -1985,12 +1986,14 @@ int id cache_measures 0x7f080072
 int id cancel_button 0x7f080073
 int id carryVelocity 0x7f080074
 int id categories_screen 0x7f080075
+int id category_name 0x7f0801f1
 int id center 0x7f080076
 int id center_horizontal 0x7f080077
 int id center_vertical 0x7f080078
 int id chain 0x7f080079
 int id chains 0x7f08007a
 int id charges_screen 0x7f08007b
+int id charges_text 0x7f0801f2
 int id charges_view 0x7f08007c
 int id checkbox 0x7f08007d
 int id checked 0x7f08007e

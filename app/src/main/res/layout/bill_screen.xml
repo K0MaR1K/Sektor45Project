@@ -6,8 +6,7 @@
     android:paddingHorizontal="20dp"
     android:paddingVertical="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:visibility="gone">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/bill_title_text"
@@ -16,7 +15,7 @@
         android:textSize="24sp"
         android:textColor="@color/white"
         android:textAlignment="center"
-        android:text="Odaberane stavke:"
+        android:text="Odabrane stavke:"
         app:layout_constraintBottom_toTopOf="@+id/BillView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

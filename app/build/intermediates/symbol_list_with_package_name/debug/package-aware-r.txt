@@ -1823,6 +1823,7 @@ drawable evt_replay
 drawable evt_script_text_outline
 drawable ic_arrow_previous
 drawable ic_arrow_right
+drawable ic_back
 drawable ic_cancel
 drawable ic_clock_black_24dp
 drawable ic_confirm
@@ -1986,12 +1987,14 @@ id cache_measures
 id cancel_button
 id carryVelocity
 id categories_screen
+id category_name
 id center
 id center_horizontal
 id center_vertical
 id chain
 id chains
 id charges_screen
+id charges_text
 id charges_view
 id checkbox
 id checked
