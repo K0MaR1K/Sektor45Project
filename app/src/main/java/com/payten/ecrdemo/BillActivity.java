@@ -96,6 +96,12 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     MainConfig mainConfig;
 
     ScrollView billText;
+    ImageButton btnCategory1;
+    ImageButton btnCategory2;
+    ImageButton btnCategory3;
+    ImageButton btnCategory4;
+    ImageButton btnGoToCategoriesScreen;
+    ImageButton btnGoToCategoriesScreen1;
     ImageButton  btnPay;
     ImageButton  btnCancel;
     TableLayout billTable;
@@ -162,9 +168,21 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         btnPay = findViewById(R.id.button_pay);
         btnCancel = findViewById(R.id.button_back);
+        btnGoToCategoriesScreen = findViewById(R.id.go_to_categories_screen_button);
+        btnGoToCategoriesScreen1 = findViewById(R.id.go_to_categories_screen_button1);
+        btnCategory1 = findViewById(R.id.button_1);
+        btnCategory2 = findViewById(R.id.button_2);
+        btnCategory3 = findViewById(R.id.button_3);
+        btnCategory4 = findViewById(R.id.button_4);
 
         btnPay.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
+        btnGoToCategoriesScreen.setOnClickListener(this);
+        btnGoToCategoriesScreen1.setOnClickListener(this);
+        btnCategory1.setOnClickListener(this);
+        btnCategory2.setOnClickListener(this);
+        btnCategory3.setOnClickListener(this);
+        btnCategory4.setOnClickListener(this);
 
 
         billText = findViewById(R.id.BillView);
@@ -949,6 +967,10 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             View categoriesScreen = findViewById(R.id.categories_screen);
             categoriesScreen.setVisibility(View.VISIBLE);
             View chargesScreen = findViewById(R.id.charges_screen);
+            btnCategory1.setVisibility(View.INVISIBLE);
+            btnCategory2.setVisibility(View.INVISIBLE);
+            btnCategory3.setVisibility(View.INVISIBLE);
+            btnCategory4.setVisibility(View.INVISIBLE);
             chargesScreen.setVisibility(View.VISIBLE);
 
             TextView categoryTitle = findViewById(R.id.category_name);
@@ -967,11 +989,17 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                     break;
             }
 
-        } else if (id == R.id.go_to_categories_screen_button) {
+        } else if (id == R.id.go_to_categories_screen_button || id == R.id.go_to_categories_screen_button1) {
             View welcomeScreen = findViewById(R.id.welcome_screen);
             welcomeScreen.setVisibility(View.INVISIBLE);
+            View chargesScreen = findViewById(R.id.charges_screen);
+            chargesScreen.setVisibility(View.INVISIBLE);
             View categoriesScreen = findViewById(R.id.categories_screen);
             categoriesScreen.setVisibility(View.VISIBLE);
+            btnCategory1.setVisibility(View.VISIBLE);
+            btnCategory2.setVisibility(View.VISIBLE);
+            btnCategory3.setVisibility(View.VISIBLE);
+            btnCategory4.setVisibility(View.VISIBLE);
 
         } else if (id == R.id.button_pay){
             showResultScreen(true);
