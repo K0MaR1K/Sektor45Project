@@ -1,6 +1,8 @@
 package com.payten.ecrdemo;
 
 import android.annotation.SuppressLint;
+import android.nfc.Tag;
+import android.nfc.NfcAdapter;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -62,7 +64,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 
-public class BillActivity extends AppCompatActivity implements View.OnClickListener {
+public class BillActivity extends AppCompatActivity implements View.OnClickListener  {
     public static Resources.Theme theme;
 
     private static final int FONT_SIZE = 20;
@@ -146,6 +148,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView settlement;
 
+
     private void loadConfig(String configFile){
         String configJson;
         configJson = getAssetJsonData(getApplicationContext(),configFile);
@@ -160,7 +163,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             finish();
         }
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -889,7 +891,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             TextView b=new TextView(this);
             String str=String.valueOf(bd.name);
 
-            if(str.length() > 15){
+            if(str.length() > 16){
                 str = str.substring(0, 16);
                 str += "...";
             }
