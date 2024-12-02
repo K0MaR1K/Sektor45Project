@@ -10,6 +10,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -52,14 +53,11 @@ import com.google.gson.Gson;
 import com.payten.ecrdemo.utils.Utils;
 import com.payten.service.PaytenAidlInterface;
 
-import org.w3c.dom.Text;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -79,11 +77,15 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     public static int ecrAction = ECR_NONE;
     public static int voidTranIndex;
 
-
-    class BillDataEntry{
-        public String item;
+    class Stavka {
+        public String name;
         public Float price;
-        public Integer quantity;
+        public String date;
+        Stavka(String item, Float price, String date) {
+            this.name = item;
+            this.price = price;
+            this.date = date;
+        }
     }
 
     private ConstraintLayout mainScreen;
@@ -112,7 +114,14 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton  btnCancel;
     TableLayout billTable;
 
-    ArrayList<BillDataEntry> billDataEntryList = new ArrayList<>();
+    ArrayList<Stavka> billDataEntryList = new ArrayList<>();
+
+    ArrayList<Button> chargesButtons = new ArrayList<>();
+    ArrayList<Stavka> chargesData = new ArrayList<>();
+    ArrayList<Stavka> chargesKazne = new ArrayList<>();
+    ArrayList<Stavka> chargesPorezi = new ArrayList<>();
+    ArrayList<Stavka> chargesRegistracije = new ArrayList<>();
+    ArrayList<Stavka> chargesOstaleTakse = new ArrayList<>();
 
     BigDecimal billTotal = BigDecimal.ZERO;
     BigDecimal donation = BigDecimal.ZERO;
@@ -155,6 +164,12 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        chargesPorezi.add(new Stavka("Porez na imovinu", 2680.00f, "30.11.2024."));
+        chargesRegistracije.add(new Stavka("Registracija vozila", 14870.00f, "23.10.2024."));
+        chargesKazne.add(new Stavka("Parking kazna", 1480.0f, "23.03.2024."));
+        chargesKazne.add(new Stavka("Kazna za prekoračenje brzine", 3000.00f, "17.09.2024."));
+
         super.onCreate(savedInstanceState);
 
         settingsClickTimer = 0;
@@ -237,22 +252,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             it.setClassName("com.payten.service","com.payten.service.PaytenEcrService");
             bindService(it,connection, Context.BIND_AUTO_CREATE);
         }
-        addItemToBill("Parking kazna", 1480.0f);
-        addItemToBill("Porez na imovinu", 2680.0f);
-        addItemToBill("Registracija vozila", 14870.0f);
 
-        if (billTotal.compareTo(BigDecimal.ZERO) > 0) {
-            setBillTableHeader();
-            setBillTableData();
-        }
-        else {
-            billTable.removeAllViewsInLayout();
-
-            btnPay.setVisibility(View.INVISIBLE);
-            btnCancel.setVisibility(View.INVISIBLE);
-            billTotal = BigDecimal.ZERO;
-            billDataEntryList.clear();
-        }
         billText.fullScroll(View.FOCUS_DOWN);
     }
 
@@ -388,29 +388,21 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     // WHEN THIS ACTIVITY IS LOADED USE THIS FOR EACH ITEM TO ADD IT TO BILL ->
-    void addItemToBill(String item, Float price){
+    void addItemToBill(Stavka data){
         settingsClickTimer = 0;
         settingsClickCount = 0;
 
-        Integer quantity = 1;
-
-        for (BillDataEntry b: billDataEntryList) {
-            if (b.item.equals(item)){
-                // Item already added - increment quantity, delete from list
-                quantity = b.quantity + 1;
-                billDataEntryList.remove(b);
-                break;
-            }
-        }
-
-        // Add item at the bottom of the list
-        BillDataEntry newItem = new BillDataEntry();
-        newItem.item = item;
-        newItem.price = price;
-        newItem.quantity = quantity;
-        billDataEntryList.add(newItem);
-        BigDecimal amt = new BigDecimal(price);
+        billDataEntryList.add(data);
+        BigDecimal amt = new BigDecimal(data.price);
         billTotal = billTotal.add(amt);
+    }
+    void removeItemFromBill(Stavka data){
+        settingsClickTimer = 0;
+        settingsClickCount = 0;
+
+        billDataEntryList.remove(data);
+        BigDecimal amt = new BigDecimal(data.price);
+        billTotal = billTotal.subtract(amt);
     }
 
     String formatAmount(BigDecimal d, boolean withCurrency){
@@ -878,10 +870,16 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     void setBillTableData(){
         int i = 0;
-        for (BillDataEntry bd: billDataEntryList) {
+        for (Stavka bd: billDataEntryList) {
+            int color;
+            if (i % 2 == 0) {
+                color = getColor(R.color.white);
+            } else {
+                color = getColor(R.color.light_gray);
+            }
+
             i++;
             BigDecimal itemTotal = new BigDecimal(bd.price);
-            itemTotal = itemTotal.multiply(new BigDecimal(bd.quantity));
 
             TableRow tr=new TableRow(this);
             tr.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
@@ -889,12 +887,12 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             mlp.setMargins(0, 5, 0, 5);
 
             TextView b=new TextView(this);
-            String str=String.valueOf(bd.item);
+            String str=String.valueOf(bd.name);
             b.setText(str);
             b.setTextSize(FONT_SIZE);
             b.setTextColor(getColor(R.color.white));
             tr.addView(b);
-
+            
             TextView b2=new TextView(this);
             b2.setGravity(Gravity.RIGHT);
             b2.setText(formatAmount(itemTotal, true));
@@ -959,7 +957,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         billDataEntryList.clear();
         billTotal = BigDecimal.ZERO;
         btnPay.setVisibility(View.INVISIBLE);
-        btnCancel.setVisibility(View.INVISIBLE);
 
         billTable.removeAllViewsInLayout();
     }
@@ -1018,7 +1015,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         } else if (id == R.id.accept_button) {
             View donationScreen = findViewById(R.id.donation_screen);
             donationScreen.setVisibility(View.INVISIBLE);
-            addItemToBill("Donacija", donation.floatValue() - billTotal.floatValue());
+            Stavka donacija = new Stavka("Donacija", donation.floatValue() - billTotal.floatValue(), "");
+            addItemToBill(donacija);
             showResultScreen(true);
             performPayment();
         } else if (id == R.id.reject_button) {
@@ -1058,42 +1056,47 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             else{
                 returnToMainScreen();
             }
-        }
-        else if (voidButtons.contains(v)){
+        } else if (chargesButtons.contains(v)) {
+            Stavka data = chargesData.get(chargesButtons.indexOf(v));
+            if (billDataEntryList.contains(data)) {
+                v.setBackgroundColor(Color.argb(0, 120, 120, 120));
+                removeItemFromBill(data);
+            } else {
+                v.setBackgroundColor(Color.argb(50, 120, 120, 120));
+                addItemToBill(data);
+            }
+        } else if (voidButtons.contains(v)) {
             // Void selected transaction
             showResultScreen(true);
             performVoid(MyApp.transactionList.get(voidButtons.indexOf(v)));
-        }
-        else if (id == R.id.settlement){
+        } else if (id == R.id.settlement) {
             showResultScreen(true);
             performSettlement();
-        }
-        else {
-            if (settingsClickTimer > 0){
+        } else {
+            if (settingsClickTimer > 0) {
                 long currentTime = SystemClock.uptimeMillis();
-                if (currentTime > settingsClickTimer + 1000){
+                if (currentTime > settingsClickTimer + 1000) {
                     settingsClickTimer = 0;
                     settingsClickCount = 0;
-                }
-                else{
-                    settingsClickCount ++;
+                } else {
+                    settingsClickCount++;
                 }
 
-                if (settingsClickCount >= 5){
+                if (settingsClickCount >= 5) {
                     settingsClickTimer = 0;
                     settingsClickCount = 0;
 
                     // Enter settings menu
                     showSystemScreen();
                 }
-            }
-            else {
+            } else {
                 settingsClickTimer = SystemClock.uptimeMillis();
                 settingsClickCount = 1;
             }
         }
 
         if (billTotal.compareTo(BigDecimal.ZERO) > 0) {
+            btnPay.setVisibility(View.VISIBLE);
             setBillTableHeader();
             setBillTableData();
         }
@@ -1101,7 +1104,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             billTable.removeAllViewsInLayout();
 
             btnPay.setVisibility(View.INVISIBLE);
-            btnCancel.setVisibility(View.INVISIBLE);
             billTotal = BigDecimal.ZERO;
             billDataEntryList.clear();
         }
@@ -1157,11 +1159,11 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "  QUANTITY                AMOUNT");
         addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "================================");
 
-        for (BillDataEntry bd: billDataEntryList) {
-            BigDecimal itemTotal = new BigDecimal(bd.price).multiply(new BigDecimal(bd.quantity));
+        for (Stavka bd: billDataEntryList) {
+            BigDecimal itemTotal = new BigDecimal(bd.price);
 
-            addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, String.valueOf(bd.item));
-            addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "  " + String.valueOf(bd.quantity) + "                                ".substring(0, 30 - String.valueOf(bd.quantity).length() - formatAmount(itemTotal, true).length()) + formatAmount(itemTotal, true));
+            addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, String.valueOf(bd.name));
+            addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "  " + formatAmount(itemTotal, true));
         }
 
         addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "________________________________");
@@ -1186,103 +1188,121 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     private void setKazneScreen(){
         TextView categoryTitle = findViewById(R.id.category_name);
         categoryTitle.setText("Kazne");
+        if (chargesKazne.size() > 0) {
+            TextView chargesText = findViewById(R.id.charges_text);
+            chargesText.setText("Odaberite stavku:");
 
-        TextView chargesText = findViewById(R.id.charges_text);
-        chargesText.setText("Odaberite stavku:");
+            LinearLayout chargesView = findViewById(R.id.charges_view);
+            ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+            chargesScrollView.setVisibility(View.VISIBLE);
+            btnGoToBillScreen.setVisibility(View.VISIBLE);
+            chargesView.removeAllViewsInLayout();
 
-        LinearLayout chargesView = findViewById(R.id.charges_view);
-        ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
-        chargesScrollView.setVisibility(View.VISIBLE);
-        btnGoToBillScreen.setVisibility(View.VISIBLE);
-        chargesView.removeAllViewsInLayout();
+            for (Stavka stavka : chargesKazne) {
+                addChargeItemToView(stavka, chargesView);
+            }
+        } else {
+            TextView chargesText = findViewById(R.id.charges_text);
+            chargesText.setText("Nema neplaćenih kazni.");
 
-        String names[] = {"Parking kazna", "Kazna za prekoračenje brzine"};
-        Double prices[] = {1480.00, 3000.00};
-        String dates[] = {"23.03.2024.", "17.09.2024."};
-
-        int n = names.length;
-        for(int i = 0; i < n; i++){
-
-            addChargeItemToView(names[i], prices[i], dates[i], chargesView);
+            ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+            chargesScrollView.setVisibility(View.GONE);
+            btnGoToBillScreen.setVisibility(View.INVISIBLE);
         }
-
     }
 
     private void setPoreziScreen(){
         TextView categoryTitle = findViewById(R.id.category_name);
         categoryTitle.setText("Porezi");
+        if (chargesPorezi.size() > 0) {
+            TextView chargesText = findViewById(R.id.charges_text);
+            chargesText.setText("Odaberite stavku:");
 
-        TextView chargesText = findViewById(R.id.charges_text);
-        chargesText.setText("Odaberite stavku:");
+            LinearLayout chargesView = findViewById(R.id.charges_view);
+            ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+            chargesScrollView.setVisibility(View.VISIBLE);
+            btnGoToBillScreen.setVisibility(View.VISIBLE);
+            chargesView.removeAllViewsInLayout();
 
-        LinearLayout chargesView = findViewById(R.id.charges_view);
-        ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
-        chargesScrollView.setVisibility(View.VISIBLE);
-        btnGoToBillScreen.setVisibility(View.VISIBLE);
-        chargesView.removeAllViewsInLayout();
+            for (Stavka stavka : chargesPorezi) {
+                addChargeItemToView(stavka, chargesView);
+            }
+        } else {
+            TextView chargesText = findViewById(R.id.charges_text);
+            chargesText.setText("Nema neplaćenih poreza.");
 
-        String names[] = {"Porez na imovinu"};
-        Double prices[] = {2680.00};
-        String dates[] = {"30.11.2024."};
-
-        int n = names.length;
-        for(int i = 0; i < n; i++){
-
-            addChargeItemToView(names[i], prices[i], dates[i], chargesView);
-
+            ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+            chargesScrollView.setVisibility(View.GONE);
+            btnGoToBillScreen.setVisibility(View.INVISIBLE);
         }
     }
 
     private void setRegScreen(){
         TextView categoryTitle = findViewById(R.id.category_name);
         categoryTitle.setText("Registracija");
+        if (chargesRegistracije.size() > 0) {
+            TextView chargesText = findViewById(R.id.charges_text);
+            chargesText.setText("Odaberite stavku:");
 
-        TextView chargesText = findViewById(R.id.charges_text);
-        chargesText.setText("Odaberite stavku:");
+            LinearLayout chargesView = findViewById(R.id.charges_view);
+            ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+            chargesScrollView.setVisibility(View.VISIBLE);
+            btnGoToBillScreen.setVisibility(View.VISIBLE);
+            chargesView.removeAllViewsInLayout();
 
-        LinearLayout chargesView = findViewById(R.id.charges_view);
-        ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
-        chargesScrollView.setVisibility(View.VISIBLE);
-        btnGoToBillScreen.setVisibility(View.VISIBLE);
-        chargesView.removeAllViewsInLayout();
+            for (Stavka stavka : chargesRegistracije) {
+                addChargeItemToView(stavka, chargesView);
+            }
+        } else {
+            TextView chargesText = findViewById(R.id.charges_text);
+            chargesText.setText("Nema neplaćenih registracija.");
 
-        String names[] = {"Registracija vozila"};
-        Double prices[] = {14870.00};
-        String dates[] = {"23.10.2024."};
-
-        int n = names.length;
-        for(int i = 0; i < n; i++){
-
-            addChargeItemToView(names[i], prices[i], dates[i], chargesView);
+            ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+            chargesScrollView.setVisibility(View.GONE);
+            btnGoToBillScreen.setVisibility(View.INVISIBLE);
         }
     }
 
     private void setOstaloScreen(){
         TextView categoryTitle = findViewById(R.id.category_name);
         categoryTitle.setText("Ostale takse");
+        if (chargesOstaleTakse.size() > 0) {
+            TextView chargesText = findViewById(R.id.charges_text);
+            chargesText.setText("Odaberite stavku:");
 
-        TextView chargesText = findViewById(R.id.charges_text);
-        chargesText.setText("Nema neplaćenih taksi iz ove kategorije.");
+            LinearLayout chargesView = findViewById(R.id.charges_view);
+            ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+            chargesScrollView.setVisibility(View.VISIBLE);
+            btnGoToBillScreen.setVisibility(View.VISIBLE);
+            chargesView.removeAllViewsInLayout();
 
-        ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
-        chargesScrollView.setVisibility(View.GONE);
-        btnGoToBillScreen.setVisibility(View.INVISIBLE);
+            for (Stavka stavka : chargesOstaleTakse) {
+                addChargeItemToView(stavka, chargesView);
+            }
+        } else {
+            TextView chargesText = findViewById(R.id.charges_text);
+            chargesText.setText("Nema neplaćenih taksi iz ove kategorije.");
+
+            ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+            chargesScrollView.setVisibility(View.GONE);
+            btnGoToBillScreen.setVisibility(View.INVISIBLE);
+        }
     }
 
-    private void addChargeItemToView(String name, Double price, String date, LinearLayout chargesView){
-
+    private void addChargeItemToView(Stavka stavka, LinearLayout chargesView){
         LinearLayout chargeItem = new LinearLayout(getApplicationContext());
         chargeItem.setOrientation(LinearLayout.VERTICAL);
         chargeItem.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) chargeItem.getLayoutParams();
         mlp.setMargins(0, 5, 0, 5);
 
+
         LinearLayout linearLayout = new LinearLayout(getApplicationContext());
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         TextView itemName = new TextView(getApplicationContext());
-        itemName.setText(name);
+        itemName.setText(stavka.name);
         itemName.setTextColor(getResources().getColor(R.color.white));
         itemName.setTextSize(18);
         itemName.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -1303,7 +1323,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         linearLayout1.addView(dateText);
 
         TextView itemDate = new TextView(getApplicationContext());
-        itemDate.setText(date);
+        itemDate.setText(stavka.date);
         itemDate.setTextColor(getResources().getColor(R.color.white));
         itemDate.setTextSize(16);
         itemDate.setTypeface(null, Typeface.ITALIC);
@@ -1314,7 +1334,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         linearLayout.addView(linearLayout1);
 
         TextView itemPrice = new TextView(getApplicationContext());
-        itemPrice.setText(price.toString());
+        itemPrice.setText(stavka.price.toString());
         itemPrice.setTextColor(getResources().getColor(R.color.white));
         itemPrice.setTextSize(18);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -1324,7 +1344,24 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         chargeItem.addView(linearLayout);
         chargeItem.addView(itemPrice);
 
-        chargesView.addView(chargeItem);
+        Button button = new Button(getApplicationContext());
+        button.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+        if (billDataEntryList.contains(stavka))
+            button.setBackgroundColor(Color.argb(50, 120, 120, 120));
+        else
+            button.setBackgroundColor(Color.argb(0, 120, 120, 120));
+
+        button.setOnClickListener(this);
+        chargesButtons.add(button);
+        chargesData.add(stavka);
+
+        FrameLayout frameLayout = new FrameLayout(getApplicationContext());
+
+        frameLayout.addView(chargeItem);
+        frameLayout.addView(button);
+
+        chargesView.addView(frameLayout);
     }
 
     @Override
