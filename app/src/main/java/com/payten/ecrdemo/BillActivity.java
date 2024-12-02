@@ -19,17 +19,13 @@ import android.os.Looper;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import android.util.Log;
-import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -171,7 +167,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnCancel = findViewById(R.id.button_back);
         btnGoToWelcomeScreen = findViewById(R.id.go_to_welcome_screen_button);
         btnGoToCategoriesScreen = findViewById(R.id.go_to_categories_screen_button);
-        btnGoToCategoriesScreen1 = findViewById(R.id.go_to_categories_screen_button1);
+        btnGoToCategoriesScreen1 = findViewById(R.id.accept_button);
         btnCategory1 = findViewById(R.id.button_1);
         btnCategory2 = findViewById(R.id.button_2);
         btnCategory3 = findViewById(R.id.button_3);
@@ -191,11 +187,11 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         billText = findViewById(R.id.BillView);
         billTable = findViewById(R.id.BillTable);
 
-        findViewById(R.id.mainScreen).setOnClickListener(this);
+        findViewById(R.id.bill_screen).setOnClickListener(this);
 
         billTable.removeAllViewsInLayout();
 
-        mainScreen = findViewById(R.id.mainScreen);
+        mainScreen = findViewById(R.id.bill_screen);
         resultScreen = findViewById(R.id.resultScreen);
         systemScreen = findViewById(R.id.systemScreen);
 
@@ -960,12 +956,10 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
 
         if (id == R.id.button_back){
-            // TODO: GO BACK TO CATEGORIES SCREEN
-            // ERASE ->
-            /* btnPay.setVisibility(View.INVISIBLE);
-            btnCancel.setVisibility(View.INVISIBLE);
-            billTotal = BigDecimal.ZERO;
-            billDataEntryList.clear(); */
+            View billScreen = findViewById(R.id.bill_screen);
+            billScreen.setVisibility(View.INVISIBLE);
+            View chargesScreen = findViewById(R.id.charges_screen);
+            chargesScreen.setVisibility(View.INVISIBLE);
         } else if(id == R.id.go_to_welcome_screen_button){
             View categoriesScreen = findViewById(R.id.categories_screen);
             categoriesScreen.setVisibility(View.INVISIBLE);
@@ -998,7 +992,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                     break;
             }
 
-        } else if (id == R.id.go_to_categories_screen_button || id == R.id.go_to_categories_screen_button1) {
+        } else if (id == R.id.go_to_categories_screen_button || id == R.id.accept_button) {
             View welcomeScreen = findViewById(R.id.welcome_screen);
             welcomeScreen.setVisibility(View.INVISIBLE);
             View chargesScreen = findViewById(R.id.charges_screen);

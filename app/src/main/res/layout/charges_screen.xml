@@ -50,7 +50,7 @@
             android:layout_marginTop="25dp">
 
             <ImageButton
-                android:id="@+id/go_to_categories_screen_button1"
+                android:id="@+id/accept_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back"
@@ -64,7 +64,7 @@
                 android:src="@drawable/ic_proceed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@+id/go_to_categories_screen_button1"
+                app:layout_constraintStart_toEndOf="@+id/accept_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
