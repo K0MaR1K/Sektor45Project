@@ -8,10 +8,6 @@
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ecrdemo.png"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_categories_screen.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/categories_screen.xml"
-    },
-    {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
@@ -80,12 +76,12 @@
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ostalo_button.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ostalo_button.png"
+        "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_charges_item.xml.flat",
+        "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\charges_item.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_reg_button.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/reg_button.png"
+        "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_kazne_button.png.flat",
+        "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\kazne_button.png"
     },
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_arrow_right.xml.flat",
@@ -100,10 +96,6 @@
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\welcome_screen.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_kazne_button.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/kazne_button.png"
-    },
-    {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_bill_screen.xml.flat",
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\bill_screen.xml"
     },
@@ -112,8 +104,8 @@
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_porezi_button.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/porezi_button.png"
+        "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ostalo_button.png.flat",
+        "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ostalo_button.png"
     },
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_evt_script_text_outline.xml.flat",
@@ -122,6 +114,10 @@
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_result_screen.xml.flat",
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\result_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_reg_button.png.flat",
+        "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\reg_button.png"
     },
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -134,6 +130,14 @@
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_proceed.xml.flat",
         "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_proceed.xml"
+    },
+    {
+        "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_porezi_button.png.flat",
+        "source": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\porezi_button.png"
+    },
+    {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_charges_screen.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/layout/charges_screen.xml"
     },
     {
         "merged": "C:\\Users\\User20\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_arrow_previous.xml.flat",
