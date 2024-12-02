@@ -888,6 +888,12 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
             TextView b=new TextView(this);
             String str=String.valueOf(bd.name);
+
+            if(str.length() > 15){
+                str = str.substring(0, 16);
+                str += "...";
+            }
+
             b.setText(str);
             b.setTextSize(FONT_SIZE);
             b.setTextColor(getColor(R.color.white));
