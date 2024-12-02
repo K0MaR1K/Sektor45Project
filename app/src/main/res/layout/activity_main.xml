@@ -15,6 +15,10 @@
         android:visibility="gone" />
     <include layout="@layout/result_screen" android:visibility="gone"/>
     <include layout="@layout/system_screen" android:visibility="gone"/>
-    <include layout="@layout/donation_screen" android:visibility="gone"/>
+
+    <include
+        android:id="@+id/donation_screen"
+        layout="@layout/donation_screen"
+        android:visibility="gone" />
 
 </FrameLayout>

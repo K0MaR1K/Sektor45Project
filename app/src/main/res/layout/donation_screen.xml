@@ -82,12 +82,12 @@
                 android:backgroundTintMode="screen"
                 android:text="Da"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/deny_button"
+                app:layout_constraintEnd_toStartOf="@+id/reject_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/deny_button"
+                android:id="@+id/reject_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#23263C"

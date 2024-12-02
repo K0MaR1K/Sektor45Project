@@ -92,6 +92,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     MainConfig mainConfig;
 
     ScrollView billText;
+    TextView btnDa;
+    TextView btnNe;
     ImageButton btnCategory1;
     ImageButton btnCategory2;
     ImageButton btnCategory3;
@@ -106,6 +108,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     ArrayList<BillDataEntry> billDataEntryList = new ArrayList<>();
 
     BigDecimal billTotal = BigDecimal.ZERO;
+    BigDecimal donation = BigDecimal.ZERO;
 
     EcrJsonRsp resp = null;
 
@@ -173,6 +176,9 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnCategory3 = findViewById(R.id.button_3);
         btnCategory4 = findViewById(R.id.button_4);
 
+        btnDa = findViewById(R.id.accept_button);
+        btnNe = findViewById(R.id.reject_button);
+
         btnPay.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
         btnGoToWelcomeScreen.setOnClickListener(this);
@@ -183,6 +189,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnCategory3.setOnClickListener(this);
         btnCategory4.setOnClickListener(this);
 
+        btnDa.setOnClickListener(this);
+        btnNe.setOnClickListener(this);
 
         billText = findViewById(R.id.BillView);
         billTable = findViewById(R.id.BillTable);
@@ -267,6 +275,14 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
             return null;
         }
+    }
+
+    private void calculateDonation() {
+        TextView total_text = findViewById(R.id.total_amount);
+        TextView donation_text = findViewById(R.id.donation_text);
+        total_text.setText(formatAmount(billTotal, true));
+        donation = BigDecimal.valueOf(Math.ceil(billTotal.doubleValue()));
+        donation_text.setText(formatAmount(donation, true));
     }
 
     private void doEcr(String json, boolean fromAssets){
@@ -992,7 +1008,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                     break;
             }
 
-        } else if (id == R.id.go_to_categories_screen_button || id == R.id.accept_button) {
+        } else if (id == R.id.go_to_categories_screen_button || id == R.id.back_to_categories_button) {
             View welcomeScreen = findViewById(R.id.welcome_screen);
             welcomeScreen.setVisibility(View.INVISIBLE);
             View chargesScreen = findViewById(R.id.charges_screen);
@@ -1003,8 +1019,19 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             btnCategory2.setVisibility(View.VISIBLE);
             btnCategory3.setVisibility(View.VISIBLE);
             btnCategory4.setVisibility(View.VISIBLE);
-
-        } else if (id == R.id.button_pay){
+        } else if (id == R.id.accept_button) {
+            addItemToBill("Donacija", donation.floatValue() - billTotal.floatValue());
+            View billScreen = findViewById(R.id.bill_screen);
+            billScreen.setVisibility(View.VISIBLE);
+            View donationScreen = findViewById(R.id.donation_screen);
+            donationScreen.setVisibility(View.INVISIBLE);
+        } else if (id == R.id.reject_button) {
+            View billScreen = findViewById(R.id.bill_screen);
+            billScreen.setVisibility(View.VISIBLE);
+            View donationScreen = findViewById(R.id.donation_screen);
+            donationScreen.setVisibility(View.INVISIBLE);
+        }
+        else if (id == R.id.button_pay){
             showResultScreen(true);
             performPayment();
         }
