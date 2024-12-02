@@ -4,7 +4,7 @@
             "outputFile": "com.payten.ecrdemo.app-mergeDebugResources-17:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\markm\\.gradle\\caches\\transforms-3\\4f3f4ca4f456e69a6dde89dbeb03c64f\\transformed\\appcompat-1.3.1\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\User20\\.gradle\\caches\\transforms-3\\4f3f4ca4f456e69a6dde89dbeb03c64f\\transformed\\appcompat-1.3.1\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

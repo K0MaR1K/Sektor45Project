@@ -94,6 +94,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     int buttonOffset = 0;
     ScrollView billText;
+    ImageButton btnGoToCategoriesScreen;
     ImageButton  btnPay;
     ImageButton  btnCancel;
     TableLayout billTable;
@@ -165,26 +166,23 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         btnPay = findViewById(R.id.button_pay);
         btnCancel = findViewById(R.id.button_back);
+        btnGoToCategoriesScreen = findViewById(R.id.go_to_categories_screen_button);
 
 
         btnPay.setOnClickListener(this);
         btnCancel.setOnClickListener(this);
+        btnGoToCategoriesScreen.setOnClickListener(this);
 
         billText = findViewById(R.id.BillView);
         billTable = findViewById(R.id.BillTable);
 
         findViewById(R.id.mainScreen).setOnClickListener(this);
-
-        btnPay.setVisibility(View.INVISIBLE);
-        btnCancel.setVisibility(View.INVISIBLE);
+        
         billTable.removeAllViewsInLayout();
 
         mainScreen = findViewById(R.id.mainScreen);
         resultScreen = findViewById(R.id.resultScreen);
         systemScreen = findViewById(R.id.systemScreen);
-        mainScreen.setVisibility(View.VISIBLE);
-        resultScreen.setVisibility(View.GONE);
-        systemScreen.setVisibility(View.GONE);
 
         resultText = findViewById(R.id.resultText);
         btnPrint = findViewById(R.id.button_Print);
@@ -231,42 +229,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setAppTheme() {
         int theme = R.style.MainTheme;
-        String themeName = mainConfig.colorScheme;
-        if (themeName != null){
-            if (themeName.equalsIgnoreCase("ORANGE")){
-                theme = R.style.OrangeTheme;
-            }
-            else if (themeName.equalsIgnoreCase("MAGENTA")){
-                theme = R.style.MagentaTheme;
-            }
-            else if (themeName.equalsIgnoreCase("GREEN") || themeName.equalsIgnoreCase("LIZZARD")){
-                theme = R.style.GreenTheme;
-            }
-            else if (themeName.equalsIgnoreCase("TEAL")){
-                theme = R.style.TealTheme;
-            }
-            else if (themeName.equalsIgnoreCase("PURPLE")){
-                theme = R.style.PurpleTheme;
-            }
-            else if (themeName.equalsIgnoreCase("YELLOW")){
-                theme = R.style.YellowTheme;
-            }
-            else if (themeName.equalsIgnoreCase("NAVY")){
-                theme = R.style.NavyTheme;
-            }
-            else if (themeName.equalsIgnoreCase("RED")){
-                theme = R.style.RedTheme;
-            }
-            else if (themeName.equalsIgnoreCase("GRAY") || themeName.equalsIgnoreCase("GREY") || themeName.equalsIgnoreCase("SILVER")){
-                theme = R.style.GrayTheme;
-            }
-            else if (themeName.equalsIgnoreCase("LILAC") || themeName.equalsIgnoreCase("VIOLET")){
-                theme = R.style.LilacTheme;
-            }
-            else if (themeName.equalsIgnoreCase("CYAN")  || themeName.equalsIgnoreCase("SKY")){
-                theme = R.style.CyanTheme;
-            }
-        }
 
         setTheme(theme);
     }
@@ -393,8 +355,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         settingsClickTimer = 0;
         settingsClickCount = 0;
 
-        btnPay.setVisibility(View.VISIBLE);
-        btnCancel.setVisibility(View.VISIBLE);
         Integer quantity = 1;
 
         for (BillDataEntry b: billDataEntryList) {
