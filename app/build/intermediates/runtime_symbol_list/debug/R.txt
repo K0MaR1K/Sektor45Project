@@ -1163,6 +1163,7 @@ int color gray 0x7f05006d
 int color green 0x7f05006e
 int color highlighted_text_material_dark 0x7f05006f
 int color highlighted_text_material_light 0x7f050070
+int color light_anthracite 0x7f0500fb
 int color light_gray 0x7f050071
 int color light_green 0x7f050072
 int color light_purple 0x7f050073
@@ -2001,10 +2002,6 @@ int id center_horizontal 0x7f080076
 int id center_vertical 0x7f080077
 int id chain 0x7f080078
 int id chains 0x7f080079
-int id charges_item 0x7f0801f3
-int id charges_item_date 0x7f0801f4
-int id charges_item_name 0x7f0801f5
-int id charges_item_price 0x7f0801f6
 int id charges_screen 0x7f08007a
 int id charges_scrollView 0x7f0801f8
 int id charges_text 0x7f08007b
@@ -2458,7 +2455,6 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_main 0x7f0b001c
 int layout bill_screen 0x7f0b001d
 int layout categories_screen 0x7f0b001e
-int layout charges_item 0x7f0b0077
 int layout charges_screen 0x7f0b001f
 int layout custom_dialog 0x7f0b0020
 int layout design_bottom_navigation_item 0x7f0b0021

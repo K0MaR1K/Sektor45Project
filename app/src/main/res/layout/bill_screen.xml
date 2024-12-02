@@ -25,7 +25,7 @@
         android:id="@+id/BillView"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:background="@color/white"
+        android:background="@color/light_anthracite"
         android:fadeScrollbars="false"
         app:layout_constraintBottom_toTopOf="@id/button_back"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
+            android:layout_marginRight="5dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="10dp">
 
         </TableLayout>
 

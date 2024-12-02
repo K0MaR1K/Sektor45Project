@@ -1164,6 +1164,7 @@ color gray
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_anthracite
 color light_gray
 color light_green
 color light_purple
@@ -2002,10 +2003,6 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id charges_item
-id charges_item_date
-id charges_item_name
-id charges_item_price
 id charges_screen
 id charges_scrollView
 id charges_text
@@ -2459,7 +2456,6 @@ layout abc_tooltip
 layout activity_main
 layout bill_screen
 layout categories_screen
-layout charges_item
 layout charges_screen
 layout custom_dialog
 layout design_bottom_navigation_item
