@@ -66,7 +66,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     public static Resources.Theme theme;
 
     private static final int FONT_SIZE = 20;
-    private static final int LOWER_MARGIN = 20;
+    private static final int LOWER_MARGIN = 16;
 
 
     public static final int ECR_NONE = 0;
