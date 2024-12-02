@@ -939,7 +939,16 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     void returnToMainScreen(){
-        mainScreen.setVisibility(View.VISIBLE);
+        View welcomeScreen = findViewById(R.id.welcome_screen);
+        welcomeScreen.setVisibility(View.VISIBLE);
+        View screen = findViewById(R.id.categories_screen);
+        screen.setVisibility(View.GONE);
+        screen = findViewById(R.id.charges_screen);
+        screen.setVisibility(View.GONE);
+        screen = findViewById(R.id.bill_screen);
+        screen.setVisibility(View.GONE);
+        screen = findViewById(R.id.donation_screen);
+        screen.setVisibility(View.GONE);
         resultScreen.setVisibility(View.GONE);
         systemScreen.setVisibility(View.GONE);
 
