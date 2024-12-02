@@ -30,7 +30,7 @@ public class MyApp  extends Application {
 
         //        @Override
         public void onActivityResumed(Activity activity) {
-            if(activity instanceof MainActivity){
+            if(activity instanceof BillActivity){
                 currentActivity = activity;
             }
         }
@@ -51,7 +51,7 @@ public class MyApp  extends Application {
 
         //        @Override
         public void onActivityDestroyed(Activity activity) {
-            if(activity instanceof  MainActivity){
+            if(activity instanceof BillActivity){
                 currentActivity = null;
             }
         }

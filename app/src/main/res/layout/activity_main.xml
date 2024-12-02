@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.payten.ecrdemo.MainActivity">
+    tools:context="com.payten.ecrdemo.BillActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainScreen"
@@ -14,148 +14,7 @@
         >
 
 
-        <ImageButton
-            android:id="@+id/button_left"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:backgroundTint="?attr/colorButtonNormal"
-            android:src="@drawable/ic_arrow_previous"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/button_right"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_1"
-            />
-
-        <ImageButton
-            android:id="@+id/button_right"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:backgroundTint="?attr/colorButtonNormal"
-            android:src="@drawable/ic_arrow_right"
-            app:layout_constraintStart_toEndOf="@id/button_left"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_1"
-            />
-
-        <ImageButton
-            android:id="@+id/button_1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/button_2"
-            app:layout_constraintTop_toBottomOf="@id/button_left"
-            app:layout_constraintBottom_toTopOf="@id/button_4"
-            />
-
-        <ImageButton
-            android:id="@+id/button_2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toEndOf="@id/button_1"
-            app:layout_constraintEnd_toStartOf="@id/button_3"
-            app:layout_constraintTop_toBottomOf="@id/button_left"
-            app:layout_constraintBottom_toTopOf="@id/button_5"
-            />
-
-        <ImageButton
-            android:id="@+id/button_3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toEndOf="@id/button_2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_left"
-            app:layout_constraintBottom_toTopOf="@id/button_6"
-            />
-
-        <ImageButton
-            android:id="@+id/button_4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/button_2"
-            app:layout_constraintTop_toBottomOf="@id/button_1"
-            app:layout_constraintBottom_toTopOf="@id/button_7"
-            />
-
-        <ImageButton
-            android:id="@+id/button_5"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toEndOf="@id/button_1"
-            app:layout_constraintEnd_toStartOf="@id/button_3"
-            app:layout_constraintTop_toBottomOf="@id/button_2"
-            app:layout_constraintBottom_toTopOf="@id/button_8"
-            />
-
-        <ImageButton
-            android:id="@+id/button_6"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toEndOf="@id/button_2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_3"
-            app:layout_constraintBottom_toTopOf="@id/button_9"
-            />
-
-        <ImageButton
-            android:id="@+id/button_7"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/button_2"
-            app:layout_constraintTop_toBottomOf="@id/button_4"
-            app:layout_constraintBottom_toTopOf="@id/BillView"
-            />
-
-        <ImageButton
-            android:id="@+id/button_8"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toEndOf="@id/button_1"
-            app:layout_constraintEnd_toStartOf="@id/button_3"
-            app:layout_constraintTop_toBottomOf="@id/button_5"
-            app:layout_constraintBottom_toTopOf="@id/BillView"
-            />
-
-        <ImageButton
-            android:id="@+id/button_9"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="?attr/colorButtonNormal"
-            app:layout_constraintStart_toEndOf="@id/button_2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_6"
-            app:layout_constraintBottom_toTopOf="@id/BillView"
-            />
-
-<!--        <ImageButton-->
+        <!--        <ImageButton-->
 <!--            android:id="@+id/button_left"-->
 <!--            android:layout_width="0dp"-->
 <!--            android:layout_height="30dp"-->
@@ -183,22 +42,22 @@
             android:id="@+id/BillView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:background="@color/white"
             android:fadeScrollbars="false"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_7"
             app:layout_constraintBottom_toTopOf="@id/button_Clear"
-        >
-            <TableLayout android:id="@+id/BillTable"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableLayout
+                android:id="@+id/BillTable"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
-            </TableLayout>
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"></TableLayout>
 
         </ScrollView>
 
@@ -207,25 +66,25 @@
             android:id="@+id/button_Clear"
             android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_marginStart="8dp"
             android:backgroundTint="@color/colorCancel"
             android:src="@drawable/ic_cancel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/button_Pay"
-            app:layout_constraintTop_toBottomOf="@id/BillView"
             app:layout_constraintBottom_toBottomOf="parent"
-            />
+            app:layout_constraintEnd_toStartOf="@id/button_Pay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/BillView" />
 
         <ImageButton
             android:id="@+id/button_Pay"
             android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="@color/colorConfirm"
             android:src="@drawable/ic_credit_card"
-            app:layout_constraintStart_toEndOf="@id/button_Clear"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/BillView"
             app:layout_constraintBottom_toBottomOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_Clear"
+            app:layout_constraintTop_toBottomOf="@id/BillView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

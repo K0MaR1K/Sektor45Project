@@ -19,7 +19,6 @@ import android.os.Looper;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import android.util.Log;
-import android.view.DragEvent;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -63,7 +62,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener/*, View.OnTouchListener*/ {
+public class BillActivity extends AppCompatActivity implements View.OnClickListener/*, View.OnTouchListener*/ {
     public static Resources.Theme theme;
 
     public static final int ECR_NONE = 0;
@@ -522,19 +521,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
-        btnLeft = findViewById(R.id.button_left);
-        btnRight = findViewById(R.id.button_right);
-
-        btn1 = findViewById(R.id.button_1);
-        btn2 = findViewById(R.id.button_2);
-        btn3 = findViewById(R.id.button_3);
-        btn4 = findViewById(R.id.button_4);
-        btn5 = findViewById(R.id.button_5);
-        btn6 = findViewById(R.id.button_6);
-        btn7 = findViewById(R.id.button_7);
-        btn8 = findViewById(R.id.button_8);
-        btn9 = findViewById(R.id.button_9);
-
         btnPay = findViewById(R.id.button_Pay);
         btnCancel = findViewById(R.id.button_Clear);
 
@@ -560,15 +546,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.mainScreen).setOnClickListener(this);
 
         findViewById(R.id.mainScreen).setOnTouchListener(new OnSwipeTouchListener(this));
-        btn1.setOnTouchListener(new OnSwipeTouchListener(this));
-        btn2.setOnTouchListener(new OnSwipeTouchListener(this));
-        btn3.setOnTouchListener(new OnSwipeTouchListener(this));
-        btn4.setOnTouchListener(new OnSwipeTouchListener(this));
-        btn5.setOnTouchListener(new OnSwipeTouchListener(this));
-        btn6.setOnTouchListener(new OnSwipeTouchListener(this));
-        btn7.setOnTouchListener(new OnSwipeTouchListener(this));
-        btn8.setOnTouchListener(new OnSwipeTouchListener(this));
-        btn9.setOnTouchListener(new OnSwipeTouchListener(this));
 
         setButtons();
         btnPay.setVisibility(View.INVISIBLE);
@@ -1414,42 +1391,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v){
         int id = v.getId();
 
-        if (id == R.id.button_1){
-            addItemToBill(buttonItems[0]);
-        }
-        else if (id == R.id.button_2){
-            addItemToBill(buttonItems[1]);
-        }
-        else if (id == R.id.button_3){
-            addItemToBill(buttonItems[2]);
-        }
-        else if (id == R.id.button_4){
-            addItemToBill(buttonItems[3]);
-        }
-        else if (id == R.id.button_5){
-            addItemToBill(buttonItems[4]);
-        }
-        else if (id == R.id.button_6){
-            addItemToBill(buttonItems[5]);
-        }
-        else if (id == R.id.button_7){
-            addItemToBill(buttonItems[6]);
-        }
-        else if (id == R.id.button_8){
-            addItemToBill(buttonItems[7]);
-        }
-        else if (id == R.id.button_9){
-            addItemToBill(buttonItems[8]);
-        }
-        else if (id == R.id.button_left){
-            buttonOffset -= 9;
-            setButtons();
-        }
-        else if (id == R.id.button_right){
-            buttonOffset += 9;
-            setButtons();
-        }
-        else if (id == R.id.button_Clear){
+        if (id == R.id.button_Clear){
             btnPay.setVisibility(View.INVISIBLE);
             btnCancel.setVisibility(View.INVISIBLE);
             itemButtons = new ArrayList<>();
