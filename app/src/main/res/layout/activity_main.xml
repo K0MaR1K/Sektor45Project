@@ -6,10 +6,10 @@
     tools:context="com.payten.ecrdemo.BillActivity">
 
     <include layout="@layout/welcome_screen"/>
-    <include layout="@layout/categories_screen"/>
-    <include layout="@layout/charges_screen"/>
-    <include layout="@layout/bill_screen"/>
-    <include layout="@layout/result_screen"/>
-    <include layout="@layout/system_screen"/>
+    <include layout="@layout/categories_screen" android:visibility="gone"/>
+    <include layout="@layout/charges_screen" android:visibility="gone"/>
+    <include layout="@layout/bill_screen" android:visibility="gone"/>
+    <include layout="@layout/result_screen" android:visibility="gone"/>
+    <include layout="@layout/system_screen" android:visibility="gone"/>
 
 </FrameLayout>
