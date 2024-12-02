@@ -6,86 +6,86 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="25"
-8-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml
+8-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml
+9-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:5:5-78
-11-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:5:22-75
+11-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:5:5-78
+11-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:5:22-75
 12
 13    <queries>
-13-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:43:5-45:15
+13-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:43:5-45:15
 14        <package android:name="com.payten.service" />
-14-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:44:9-54
-14-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:44:18-51
+14-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:44:9-54
+14-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:44:18-51
 15    </queries>
 16
 17    <application
-17-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:7:5-41:19
+17-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:7:5-41:19
 18        android:name="com.payten.ecrdemo.MyApp"
-18-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:11:9-48
+18-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:11:9-48
 19        android:allowBackup="true"
-19-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:8:9-35
+19-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:8:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.5.0] C:\Users\markm\.gradle\caches\transforms-3\6182fe6d65ef8961a040b52a46bdfbf6\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+20-->[androidx.core:core:1.5.0] C:\Users\User20\.gradle\caches\transforms-3\6182fe6d65ef8961a040b52a46bdfbf6\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 21        android:debuggable="true"
 22        android:extractNativeLibs="false"
 23        android:icon="@mipmap/ic_launcher"
-23-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:9:9-43
+23-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:9:9-43
 24        android:label="@string/app_name"
-24-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:10:9-41
+24-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:10:9-41
 25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:12:9-54
+25-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:12:9-54
 26        android:supportsRtl="true"
-26-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:13:9-35
+26-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:13:9-35
 27        android:testOnly="true"
 28        android:theme="@style/MainTheme" >
-28-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:14:9-41
+28-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:14:9-41
 29        <activity
-29-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:15:9-30:20
+29-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:15:9-30:20
 30            android:name="com.payten.ecrdemo.BillActivity"
-30-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:16:13-59
+30-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:16:13-59
 31            android:exported="true"
-31-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:18:13-36
+31-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:18:13-36
 32            android:launchMode="singleInstance" >
-32-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:17:13-48
+32-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:17:13-48
 33            <intent-filter>
-33-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:19:13-23:29
+33-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:19:13-23:29
 34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:20:17-69
-34-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:20:25-66
+34-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:20:17-69
+34-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:20:25-66
 35
 36                <category android:name="android.intent.category.LAUNCHER" />
-36-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:22:17-77
-36-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:22:27-74
+36-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:22:17-77
+36-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:22:27-74
 37            </intent-filter>
 38            <intent-filter>
-38-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:25:13-28:29
+38-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:25:13-28:29
 39                <action android:name="EcrApp.app" />
-39-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:26:17-52
-39-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:26:25-50
+39-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:26:17-52
+39-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:26:25-50
 40
 41                <category android:name="android.intent.category.DEFAULT" />
-41-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:27:17-75
-41-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:27:27-73
+41-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:27:17-75
+41-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:27:27-73
 42            </intent-filter>
 43        </activity>
 44
 45        <receiver
-45-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:32:9-39:20
+45-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:32:9-39:20
 46            android:name="com.payten.ecrdemo.MyReceiver"
-46-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:33:13-57
+46-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:33:13-57
 47            android:exported="true" >
-47-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:34:13-36
+47-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:34:13-36
 48            <intent-filter>
-48-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:35:13-38:29
+48-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:35:13-38:29
 49                <action android:name="senderIntentFilter" />
-49-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:36:17-61
-49-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:36:25-58
+49-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:36:17-61
+49-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:36:25-58
 50                <action android:name="com.payten.devicemanager.DefaultEcrApp" />
-50-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:37:17-81
-50-->C:\Users\markm\Documents\Sektro45Project\app\src\main\AndroidManifest.xml:37:25-78
+50-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:37:17-81
+50-->C:\Users\User20\Documents\GitHub\Sektor45Project\app\src\main\AndroidManifest.xml:37:25-78
 51            </intent-filter>
 52        </receiver>
 53    </application>

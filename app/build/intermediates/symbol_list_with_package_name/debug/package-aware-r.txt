@@ -2080,6 +2080,7 @@ id frost
 id ghost_view
 id ghost_view_holder
 id go_to_bill_activity_button
+id go_to_categories_screen_button
 id gone
 id graph
 id graph_wrap

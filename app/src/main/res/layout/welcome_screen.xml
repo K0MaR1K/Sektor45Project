@@ -15,5 +15,11 @@
         android:textAlignment="center"
         android:text="Dobrodošli!\nMolimo skenirajte ličnu kartu."/>
 
+    <ImageButton
+        android:id="@+id/go_to_categories_screen_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_proceed"/>
+
 
 </LinearLayout>

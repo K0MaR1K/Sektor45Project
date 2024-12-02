@@ -1,12 +1,12 @@
-#Mon Dec 02 17:42:12 CET 2024
-base.0=C\:\\Users\\markm\\Documents\\Sektro45Project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\markm\\Documents\\Sektro45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\markm\\Documents\\Sektro45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.3=C\:\\Users\\markm\\Documents\\Sektro45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
-base.4=C\:\\Users\\markm\\Documents\\Sektro45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.5=C\:\\Users\\markm\\Documents\\Sektro45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
-base.6=C\:\\Users\\markm\\Documents\\Sektro45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
-base.7=C\:\\Users\\markm\\Documents\\Sektro45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+#Mon Dec 02 17:21:27 CET 2024
+base.0=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.3=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.4=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.5=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.6=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.7=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=11/classes.dex
