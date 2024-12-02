@@ -11,9 +11,9 @@ public class MyReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Log.d("RECEIVER", "Intent received (including ECR response): " + intent.getAction());
 
-        if(MyApp.currentActivity instanceof MainActivity){
+        if(MyApp.currentActivity instanceof BillActivity){
             Log.d("RECEIVER", "Main activity already started");
-            Intent i = new Intent(context, MainActivity.class);
+            Intent i = new Intent(context, BillActivity.class);
             i.setAction(intent.getAction());
             if (intent.getStringExtra("ResponseResult") != null && intent.getStringExtra("ResponseResult") != "") {
                 i.putExtra("ResponseResult", intent.getStringExtra("ResponseResult"));
@@ -24,7 +24,7 @@ public class MyReceiver extends BroadcastReceiver {
         }
         else if(MyApp.currentActivity == null){
             Log.d("RECEIVER", "Start main activity");
-            Intent i = new Intent(context, MainActivity.class);
+            Intent i = new Intent(context, BillActivity.class);
             i.setAction(intent.getAction());
             if (intent.getStringExtra("ResponseResult") != null && intent.getStringExtra("ResponseResult") != "") {
                 i.putExtra("ResponseResult", intent.getStringExtra("ResponseResult"));
