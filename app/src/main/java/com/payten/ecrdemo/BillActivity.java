@@ -65,6 +65,10 @@ import java.util.concurrent.Executors;
 public class BillActivity extends AppCompatActivity implements View.OnClickListener {
     public static Resources.Theme theme;
 
+    private static final int FONT_SIZE = 20;
+    private static final int LOWER_MARGIN = 16;
+
+
     public static final int ECR_NONE = 0;
     public static final int ECR_TRANSACTION = 1;
     public static final int ECR_SETTLE = 2;
@@ -91,8 +95,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     MainConfig mainConfig;
 
-
-    int buttonOffset = 0;
     ScrollView billText;
     ImageButton btnCategory1;
     ImageButton btnCategory2;
@@ -120,10 +122,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     long settingsClickTimer;
     int settingsClickCount;
-
-    RadioGroup appTypes;
-    ArrayList<String> appTypesNames = new ArrayList<>();
-    ArrayList<RadioButton> appTypesButtons = new ArrayList<>();
 
     TableLayout transTable;
     ScrollView transScroll;
@@ -155,7 +153,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         settingsClickTimer = 0;
         settingsClickCount = 0;
 
-        getAppTypes();
         if (MyApp.selectedAppType.equals("")) {
             MyApp.selectedAppType = "config/RecordStore.json";
             MyApp.selectedNewAppType = "config/RecordStore.json";
@@ -211,8 +208,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnSystemOk = findViewById(R.id.btnSystemOk);
         btnSystemOk.setOnClickListener(this);
 
-        appTypes = findViewById(R.id.appTypes);
-
         transTable = findViewById(R.id.transactionTable);
         transTable.removeAllViewsInLayout();
 
@@ -226,20 +221,23 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             it.setClassName("com.payten.service","com.payten.service.PaytenEcrService");
             bindService(it,connection, Context.BIND_AUTO_CREATE);
         }
-    }
+        addItemToBill("Crnac", 69.0f);
+        addItemToBill("Kinez", 420.0f);
+        addItemToBill("Amogus", 420.0f);
 
-    private void getAppTypes() {
-        appTypesNames = new ArrayList<>();
-        appTypesButtons = new ArrayList<>();
-
-        try {
-            String[] files = MyApp.appContext.getAssets().list("config");
-            for (String file: files) {
-                appTypesNames.add("config/" + file);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (billTotal.compareTo(BigDecimal.ZERO) > 0) {
+            setBillTableHeader();
+            setBillTableData();
         }
+        else {
+            billTable.removeAllViewsInLayout();
+
+            btnPay.setVisibility(View.INVISIBLE);
+            btnCancel.setVisibility(View.INVISIBLE);
+            billTotal = BigDecimal.ZERO;
+            billDataEntryList.clear();
+        }
+        billText.fullScroll(View.FOCUS_DOWN);
     }
 
     private void setAppTheme() {
@@ -523,33 +521,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         systemScreen.setVisibility(View.VISIBLE);
         resultScreen.setVisibility(View.GONE);
 
-        appTypesButtons = new ArrayList<>();
-        appTypes.removeAllViewsInLayout();
-        for (String configFile: appTypesNames) {
-            String configJson;
-            configJson = getAssetJsonData(getApplicationContext(), configFile);
-
-            try {
-                MainConfig tmpConfig = new Gson().fromJson(configJson, MainConfig.class);
-                if (tmpConfig.items != null && tmpConfig.items.size() > 0 && tmpConfig.title != ""){
-                    RadioButton rb = new RadioButton(this);
-                    rb.setText(tmpConfig.title);
-                    rb.setTextColor(Utils.getColorFromAttribute(R.attr.colorOnSecondary));
-                    if (configFile.equals(MyApp.selectedAppType)){
-                        rb.setChecked(true);
-                    }
-                    rb.setOnClickListener(this);
-                    appTypes.addView(rb);
-                    appTypesButtons.add(rb);
-                }
-                else{
-                    appTypesNames.remove(configFile);
-                }
-            }
-            catch (Exception e){
-            }
-        }
-
         setTransTableHeader();
         setTransTableData();
     }
@@ -660,14 +631,14 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         TextView b3=new TextView(this);
         b3.setText("Trans");
         b3.setTextColor(getColor(R.color.anthracite));
-        b3.setTextSize(12);
+        b3.setTextSize(FONT_SIZE);
         b3.setTypeface(b3.getTypeface(), Typeface.BOLD);
         tr.addView(b3);
 
         TextView b4=new TextView(this);
         b4.setPadding(20, 0, 0, 0);
         b4.setGravity(Gravity.RIGHT);
-        b4.setTextSize(12);
+        b4.setTextSize(FONT_SIZE);
         b4.setText("Invoice");
         b4.setTextColor(getColor(R.color.anthracite));
         b4.setTypeface(b4.getTypeface(), Typeface.BOLD);
@@ -678,7 +649,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         b5.setGravity(Gravity.RIGHT);
         b5.setText("Amount");
         b5.setTextColor(getColor(R.color.anthracite));
-        b5.setTextSize(12);
+        b5.setTextSize(FONT_SIZE);
         b5.setTypeface(b5.getTypeface(), Typeface.BOLD);
         tr.addView(b5);
 
@@ -695,13 +666,13 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         TextView b6=new TextView(this);
         b6.setText("PAN");
         b6.setTextColor(getColor(R.color.anthracite));
-        b6.setTextSize(12);
+        b6.setTextSize(FONT_SIZE);
         b6.setTypeface(b6.getTypeface(), Typeface.BOLD);
         tr2.addView(b6);
 
         TextView b7=new TextView(this);
         b7.setPadding(20, 0, 0, 0);
-        b7.setTextSize(12);
+        b7.setTextSize(FONT_SIZE);
         b7.setText("Card");
         b7.setTextColor(getColor(R.color.anthracite));
         b7.setTypeface(b7.getTypeface(), Typeface.BOLD);
@@ -712,7 +683,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         b8.setGravity(Gravity.RIGHT);
         b8.setText("Auth #");
         b8.setTextColor(getColor(R.color.anthracite));
-        b8.setTextSize(12);
+        b8.setTextSize(FONT_SIZE);
         b8.setTypeface(b8.getTypeface(), Typeface.BOLD);
         tr2.addView(b8);
 
@@ -760,7 +731,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                 else {
                     b3.setText(td.transaction.toUpperCase());
                 }
-                b3.setTextSize(12);
+                b3.setTextSize(FONT_SIZE);
                 if (td.voided){
                     b3.setTextColor(getColor(R.color.red));
                 }
@@ -769,7 +740,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                 TextView b4 = new TextView(this);
                 b4.setPadding(20, 0, 0, 0);
                 b4.setGravity(Gravity.RIGHT);
-                b4.setTextSize(12);
+                b4.setTextSize(FONT_SIZE);
                 b4.setText(td.invoice);
                 if (td.voided){
                     b4.setTextColor(getColor(R.color.red));
@@ -780,7 +751,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                 b5.setPadding(40, 0, 0, 0);
                 b5.setGravity(Gravity.RIGHT);
                 b5.setText(td.base + " " + td.currencyCode);
-                b5.setTextSize(12);
+                b5.setTextSize(FONT_SIZE);
                 if (td.voided){
                     b5.setTextColor(getColor(R.color.red));
                 }
@@ -794,12 +765,12 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                 tr.addView(i1);
 
                 TableRow tr2 = new TableRow(this);
-                tr2.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+                tr2.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT));
                 tr2.setBackgroundColor(color);
 
                 TextView b6 = new TextView(this);
                 b6.setText(td.pan.substring(td.pan.length() - 8));
-                b6.setTextSize(12);
+                b6.setTextSize(FONT_SIZE);
                 if (td.voided){
                     b6.setTextColor(getColor(R.color.red));
                 }
@@ -807,7 +778,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
                 TextView b7 = new TextView(this);
                 b7.setPadding(20, 0, 0, 0);
-                b7.setTextSize(12);
+                b7.setTextSize(FONT_SIZE);
                 b7.setText(td.cardName);
                 if (td.voided){
                     b7.setTextColor(getColor(R.color.red));
@@ -818,7 +789,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                 b8.setPadding(40, 0, 0, 0);
                 b8.setGravity(Gravity.RIGHT);
                 b8.setText(td.authorization);
-                b8.setTextSize(12);
+                b8.setTextSize(FONT_SIZE);
                 if (td.voided){
                     b8.setTextColor(getColor(R.color.red));
                 }
@@ -849,19 +820,19 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         billTable.removeAllViewsInLayout();
         TableRow tr=new TableRow(this);
 
-        tr.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+        tr.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT));
 
         TextView b3=new TextView(this);
         b3.setText("Item");
         b3.setTextColor(getColor(R.color.anthracite));
-        b3.setTextSize(12);
+        b3.setTextSize(FONT_SIZE);
         b3.setTypeface(b3.getTypeface(), Typeface.BOLD);
         tr.addView(b3);
 
         TextView b4=new TextView(this);
         b4.setPadding(20, 0, 0, 0);
         b4.setGravity(Gravity.RIGHT);
-        b4.setTextSize(12);
+        b4.setTextSize(FONT_SIZE);
         b4.setText("Quantity");
         b4.setTextColor(getColor(R.color.anthracite));
         b4.setTypeface(b4.getTypeface(), Typeface.BOLD);
@@ -869,10 +840,10 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView b5=new TextView(this);
         b5.setPadding(40, 0, 0, 0);
-        b5.setGravity(Gravity.RIGHT);
+        b5.setGravity(Gravity.END);
         b5.setText("Amount");
         b5.setTextColor(getColor(R.color.anthracite));
-        b5.setTextSize(12);
+        b5.setTextSize(FONT_SIZE);
         b5.setTypeface(b5.getTypeface(), Typeface.BOLD);
         tr.addView(b5);
         billTable.addView(tr);
@@ -905,30 +876,22 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             TextView b=new TextView(this);
             String str=String.valueOf(bd.item);
             b.setText(str);
-            b.setTextSize(12);
+            b.setTextSize(FONT_SIZE);
             tr.addView(b);
 
             TextView b1=new TextView(this);
-            b1.setPadding(20, 0, 0, 0);
+            b1.setPadding(20, 0, 0, LOWER_MARGIN);
             b1.setGravity(Gravity.RIGHT);
-            b1.setTextSize(12);
+            b1.setTextSize(FONT_SIZE);
             b1.setText(String.valueOf(bd.quantity));
             tr.addView(b1);
 
             TextView b2=new TextView(this);
-            b2.setPadding(40, 0, 0, 0);
+            b2.setPadding(40, 0, 0, LOWER_MARGIN);
             b2.setGravity(Gravity.RIGHT);
             b2.setText(formatAmount(itemTotal, true));
-            b2.setTextSize(12);
+            b2.setTextSize(FONT_SIZE);
             tr.addView(b2);
-
-            ImageButton i1 =new ImageButton(this);
-            i1.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.colorCancel)));
-            i1.setImageResource(R.drawable.ic_cancel);
-            i1.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            tr.addView(i1);
-
-            i1.setOnClickListener(this);
 
             billTable.addView(tr);
         }
@@ -937,6 +900,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             final View vline = new View(this);
             vline.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, 2));
             vline.setBackgroundColor(getColor(R.color.anthracite));
+
             billTable.addView(vline); // add line below data
 
             TableRow tr = new TableRow(this);
@@ -946,14 +910,14 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             TextView b3 = new TextView(this);
             b3.setText("Total");
             b3.setTextColor(getColor(R.color.anthracite));
-            b3.setTextSize(12);
+            b3.setTextSize(FONT_SIZE);
             b3.setTypeface(b3.getTypeface(), Typeface.BOLD);
             tr.addView(b3);
 
             TextView b4 = new TextView(this);
             b4.setPadding(20, 0, 0, 0);
             b4.setGravity(Gravity.RIGHT);
-            b4.setTextSize(12);
+            b4.setTextSize(FONT_SIZE);
             b4.setText("");
             b4.setTypeface(b4.getTypeface(), Typeface.BOLD);
             b4.setTextColor(getColor(R.color.anthracite));
@@ -964,7 +928,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             b5.setGravity(Gravity.RIGHT);
             b5.setText(formatAmount(billTotal, true));
             b5.setTextColor(getColor(R.color.anthracite));
-            b5.setTextSize(12);
+            b5.setTextSize(FONT_SIZE);
             b5.setTypeface(b5.getTypeface(), Typeface.BOLD);
             tr.addView(b5);
             billTable.addView(tr);
@@ -1059,13 +1023,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             }
             else{
                 returnToMainScreen();
-            }
-        }
-        else if (appTypesButtons.contains(v)){
-            MyApp.selectedNewAppType = appTypesNames.get(appTypesButtons.indexOf(v));
-            if (!MyApp.selectedNewAppType.equals(MyApp.selectedAppType)){
-                appTypesButtons.get(appTypesNames.indexOf(MyApp.selectedAppType)).setChecked(false);
-                appTypesButtons.get(appTypesNames.indexOf(MyApp.selectedNewAppType)).setChecked(true);
             }
         }
         else if (voidButtons.contains(v)){
