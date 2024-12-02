@@ -1996,7 +1996,12 @@ int id center_horizontal 0x7f080076
 int id center_vertical 0x7f080077
 int id chain 0x7f080078
 int id chains 0x7f080079
+int id charges_item 0x7f0801f3
+int id charges_item_date 0x7f0801f4
+int id charges_item_name 0x7f0801f5
+int id charges_item_price 0x7f0801f6
 int id charges_screen 0x7f08007a
+int id charges_scrollView 0x7f0801f8
 int id charges_text 0x7f08007b
 int id charges_view 0x7f08007c
 int id checkbox 0x7f08007d
@@ -2085,7 +2090,7 @@ int id fragment_container_view_tag 0x7f0800cf
 int id frost 0x7f0800d0
 int id ghost_view 0x7f0800d1
 int id ghost_view_holder 0x7f0800d2
-int id go_to_bill_activity_button 0x7f0800d3
+int id go_to_bill_screen_button 0x7f0801f7
 int id go_to_categories_screen_button 0x7f0800d4
 int id go_to_categories_screen_button1 0x7f0800d5
 int id go_to_welcome_screen_button 0x7f0801f2
@@ -2443,6 +2448,7 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_main 0x7f0b001c
 int layout bill_screen 0x7f0b001d
 int layout categories_screen 0x7f0b001e
+int layout charges_item 0x7f0b0077
 int layout charges_screen 0x7f0b001f
 int layout custom_dialog 0x7f0b0020
 int layout design_bottom_navigation_item 0x7f0b0021

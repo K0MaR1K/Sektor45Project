@@ -1997,7 +1997,12 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id charges_item
+id charges_item_date
+id charges_item_name
+id charges_item_price
 id charges_screen
+id charges_scrollView
 id charges_text
 id charges_view
 id checkbox
@@ -2086,7 +2091,7 @@ id fragment_container_view_tag
 id frost
 id ghost_view
 id ghost_view_holder
-id go_to_bill_activity_button
+id go_to_bill_screen_button
 id go_to_categories_screen_button
 id go_to_categories_screen_button1
 id go_to_welcome_screen_button
@@ -2444,6 +2449,7 @@ layout abc_tooltip
 layout activity_main
 layout bill_screen
 layout categories_screen
+layout charges_item
 layout charges_screen
 layout custom_dialog
 layout design_bottom_navigation_item

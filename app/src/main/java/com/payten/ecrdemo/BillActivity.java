@@ -22,9 +22,12 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
@@ -49,11 +52,14 @@ import com.google.gson.Gson;
 import com.payten.ecrdemo.utils.Utils;
 import com.payten.service.PaytenAidlInterface;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -101,6 +107,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     Button btnGoToWelcomeScreen;
     ImageButton btnGoToCategoriesScreen;
     ImageButton btnGoToCategoriesScreen1;
+    ImageButton btnGoToBillScreen;
     ImageButton  btnPay;
     ImageButton  btnCancel;
     TableLayout billTable;
@@ -170,6 +177,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnCancel = findViewById(R.id.button_back);
         btnGoToWelcomeScreen = findViewById(R.id.go_to_welcome_screen_button);
         btnGoToCategoriesScreen = findViewById(R.id.go_to_categories_screen_button);
+        btnGoToBillScreen = findViewById(R.id.go_to_bill_screen_button);
         btnGoToCategoriesScreen1 = findViewById(R.id.back_to_categories_button);
         btnCategory1 = findViewById(R.id.button_1);
         btnCategory2 = findViewById(R.id.button_2);
@@ -992,19 +1000,18 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             btnCategory4.setVisibility(View.INVISIBLE);
             chargesScreen.setVisibility(View.VISIBLE);
 
-            TextView categoryTitle = findViewById(R.id.category_name);
             switch (id){
                 case R.id.button_1:
-                    categoryTitle.setText("Kazne");
+                    setKazneScreen();
                     break;
                 case R.id.button_2:
-                    categoryTitle.setText("Porezi");
+                    setPoreziScreen();
                     break;
                 case R.id.button_3:
-                    categoryTitle.setText("Registracije");
+                    setRegScreen();
                     break;
                 case R.id.button_4:
-                    categoryTitle.setText("Ostale takse");
+                    setOstaloScreen();
                     break;
             }
 
@@ -1176,6 +1183,152 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "AUTH #:  " + transactionData.authorization);
         addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "________________________________");
         addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, " ");
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void setKazneScreen(){
+        TextView categoryTitle = findViewById(R.id.category_name);
+        categoryTitle.setText("Kazne");
+
+        TextView chargesText = findViewById(R.id.charges_text);
+        chargesText.setText("Odaberite stavku:");
+
+        LinearLayout chargesView = findViewById(R.id.charges_view);
+        ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+        chargesScrollView.setVisibility(View.VISIBLE);
+        btnGoToBillScreen.setVisibility(View.VISIBLE);
+        chargesView.removeAllViewsInLayout();
+
+        String names[] = {"Parking kazna", "Kazna za prekoračenje brzine"};
+        Double prices[] = {1480.00, 3000.00};
+        String dates[] = {"23.03.2024.", "17.09.2024."};
+
+        int n = names.length;
+        for(int i = 0; i < n; i++){
+
+            addChargeItemToView(names[i], prices[i], dates[i], chargesView);
+        }
+
+    }
+
+    private void setPoreziScreen(){
+        TextView categoryTitle = findViewById(R.id.category_name);
+        categoryTitle.setText("Porezi");
+
+        TextView chargesText = findViewById(R.id.charges_text);
+        chargesText.setText("Odaberite stavku:");
+
+        LinearLayout chargesView = findViewById(R.id.charges_view);
+        ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+        chargesScrollView.setVisibility(View.VISIBLE);
+        btnGoToBillScreen.setVisibility(View.VISIBLE);
+        chargesView.removeAllViewsInLayout();
+
+        String names[] = {"Porez na imovinu"};
+        Double prices[] = {2680.00};
+        String dates[] = {"30.11.2024."};
+
+        int n = names.length;
+        for(int i = 0; i < n; i++){
+
+            addChargeItemToView(names[i], prices[i], dates[i], chargesView);
+
+        }
+    }
+
+    private void setRegScreen(){
+        TextView categoryTitle = findViewById(R.id.category_name);
+        categoryTitle.setText("Registracija");
+
+        TextView chargesText = findViewById(R.id.charges_text);
+        chargesText.setText("Odaberite stavku:");
+
+        LinearLayout chargesView = findViewById(R.id.charges_view);
+        ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+        chargesScrollView.setVisibility(View.VISIBLE);
+        btnGoToBillScreen.setVisibility(View.VISIBLE);
+        chargesView.removeAllViewsInLayout();
+
+        String names[] = {"Registracija vozila"};
+        Double prices[] = {14870.00};
+        String dates[] = {"23.10.2024."};
+
+        int n = names.length;
+        for(int i = 0; i < n; i++){
+
+            addChargeItemToView(names[i], prices[i], dates[i], chargesView);
+        }
+    }
+
+    private void setOstaloScreen(){
+        TextView categoryTitle = findViewById(R.id.category_name);
+        categoryTitle.setText("Ostale takse");
+
+        TextView chargesText = findViewById(R.id.charges_text);
+        chargesText.setText("Nema neplaćenih taksi iz ove kategorije.");
+
+        ScrollView chargesScrollView = findViewById(R.id.charges_scrollView);
+        chargesScrollView.setVisibility(View.GONE);
+        btnGoToBillScreen.setVisibility(View.INVISIBLE);
+    }
+
+    private void addChargeItemToView(String name, Double price, String date, LinearLayout chargesView){
+
+        LinearLayout chargeItem = new LinearLayout(getApplicationContext());
+        chargeItem.setOrientation(LinearLayout.VERTICAL);
+        chargeItem.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) chargeItem.getLayoutParams();
+        mlp.setMargins(0, 5, 0, 5);
+
+        LinearLayout linearLayout = new LinearLayout(getApplicationContext());
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+        linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        TextView itemName = new TextView(getApplicationContext());
+        itemName.setText(name);
+        itemName.setTextColor(getResources().getColor(R.color.white));
+        itemName.setTextSize(18);
+        itemName.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        linearLayout.addView(itemName);
+
+        LinearLayout linearLayout1 = new LinearLayout(getApplicationContext());
+        linearLayout1.setOrientation(LinearLayout.HORIZONTAL);
+        linearLayout1.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        TextView dateText = new TextView(getApplicationContext());
+        dateText.setText("\tDatum: ");
+        dateText.setTextColor(getResources().getColor(R.color.white));
+        dateText.setTextSize(16);
+        dateText.setTypeface(null, Typeface.ITALIC);
+        dateText.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        linearLayout1.addView(dateText);
+
+        TextView itemDate = new TextView(getApplicationContext());
+        itemDate.setText(date);
+        itemDate.setTextColor(getResources().getColor(R.color.white));
+        itemDate.setTextSize(16);
+        itemDate.setTypeface(null, Typeface.ITALIC);
+        itemDate.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        itemDate.setGravity(Gravity.END);
+
+        linearLayout1.addView(itemDate);
+
+        linearLayout.addView(linearLayout1);
+
+        TextView itemPrice = new TextView(getApplicationContext());
+        itemPrice.setText(price.toString());
+        itemPrice.setTextColor(getResources().getColor(R.color.white));
+        itemPrice.setTextSize(18);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams.gravity = Gravity.END;
+        itemPrice.setLayoutParams(layoutParams);
+
+        chargeItem.addView(linearLayout);
+        chargeItem.addView(itemPrice);
+
+        chargesView.addView(chargeItem);
     }
 
     @Override
