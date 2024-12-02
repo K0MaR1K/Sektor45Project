@@ -1818,6 +1818,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable donation
 drawable ecrdemo
 drawable evt_replay
 drawable evt_script_text_outline
@@ -1836,6 +1837,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_proceed
 drawable kazne_button
+drawable logo_button
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1892,6 +1894,7 @@ id SYM
 id TOP_END
 id TOP_START
 id accelerate
+id accept_button
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1964,11 +1967,13 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_to_categories_button
 id barrier
 id baseline
 id beginOnFirstDraw
 id beginning
 id bestChoice
+id bill_screen
 id bill_title_text
 id blocking
 id bottom
@@ -2055,6 +2060,9 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id donation_image
+id donation_screen
+id donation_text
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2093,7 +2101,6 @@ id ghost_view
 id ghost_view_holder
 id go_to_bill_screen_button
 id go_to_categories_screen_button
-id go_to_categories_screen_button1
 id go_to_welcome_screen_button
 id gone
 id graph
@@ -2133,7 +2140,6 @@ id line3
 id linear
 id listMode
 id list_item
-id mainScreen
 id masked
 id match_constraint
 id match_parent
@@ -2231,6 +2237,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id reject_button
 id resultScreen
 id resultText
 id reverseSawtooth
@@ -2238,6 +2245,8 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id round_amount
+id round_text
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -2344,6 +2353,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id total_amount
 id touch_outside
 id transactionList
 id transactionTable
@@ -2467,6 +2477,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout donation_screen
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

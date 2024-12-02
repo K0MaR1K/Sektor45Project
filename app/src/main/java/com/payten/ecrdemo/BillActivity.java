@@ -1320,7 +1320,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         itemDate.setTextSize(16);
         itemDate.setTypeface(null, Typeface.ITALIC);
         itemDate.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        itemDate.setGravity(Gravity.END);
 
         linearLayout1.addView(itemDate);
 

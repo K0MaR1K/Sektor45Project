@@ -1817,6 +1817,7 @@ int drawable design_ic_visibility 0x7f070060
 int drawable design_ic_visibility_off 0x7f070061
 int drawable design_password_eye 0x7f070062
 int drawable design_snackbar_background 0x7f070063
+int drawable donation 0x7f07009d
 int drawable ecrdemo 0x7f070064
 int drawable evt_replay 0x7f070065
 int drawable evt_script_text_outline 0x7f070066
@@ -1835,6 +1836,7 @@ int drawable ic_mtrl_chip_checked_circle 0x7f070072
 int drawable ic_mtrl_chip_close_circle 0x7f070073
 int drawable ic_proceed 0x7f070074
 int drawable kazne_button 0x7f070099
+int drawable logo_button 0x7f07009e
 int drawable material_cursor_drawable 0x7f070075
 int drawable material_ic_calendar_black_24dp 0x7f070076
 int drawable material_ic_clear_black_24dp 0x7f070077
@@ -1891,6 +1893,7 @@ int id SYM 0x7f08000d
 int id TOP_END 0x7f08000e
 int id TOP_START 0x7f08000f
 int id accelerate 0x7f080010
+int id accept_button 0x7f0801f9
 int id accessibility_action_clickable_span 0x7f080011
 int id accessibility_custom_action_0 0x7f080012
 int id accessibility_custom_action_1 0x7f080013
@@ -1963,11 +1966,13 @@ int id auto 0x7f080055
 int id autoComplete 0x7f080056
 int id autoCompleteToEnd 0x7f080057
 int id autoCompleteToStart 0x7f080058
+int id back_to_categories_button 0x7f0801fa
 int id barrier 0x7f080059
 int id baseline 0x7f08005a
 int id beginOnFirstDraw 0x7f08005b
 int id beginning 0x7f08005c
 int id bestChoice 0x7f08005d
+int id bill_screen 0x7f0801fb
 int id bill_title_text 0x7f08005e
 int id blocking 0x7f08005f
 int id bottom 0x7f080060
@@ -2054,6 +2059,9 @@ int id disableIntraAutoTransition 0x7f0800ab
 int id disablePostScroll 0x7f0800ac
 int id disableScroll 0x7f0800ad
 int id disjoint 0x7f0800ae
+int id donation_image 0x7f0801fc
+int id donation_screen 0x7f0801fd
+int id donation_text 0x7f0801fe
 int id dragAnticlockwise 0x7f0800af
 int id dragClockwise 0x7f0800b0
 int id dragDown 0x7f0800b1
@@ -2092,7 +2100,6 @@ int id ghost_view 0x7f0800d1
 int id ghost_view_holder 0x7f0800d2
 int id go_to_bill_screen_button 0x7f0801f7
 int id go_to_categories_screen_button 0x7f0800d4
-int id go_to_categories_screen_button1 0x7f0800d5
 int id go_to_welcome_screen_button 0x7f0801f2
 int id gone 0x7f0800d6
 int id graph 0x7f0800d7
@@ -2132,7 +2139,6 @@ int id line3 0x7f0800f8
 int id linear 0x7f0800f9
 int id listMode 0x7f0800fa
 int id list_item 0x7f0800fb
-int id mainScreen 0x7f0800fc
 int id masked 0x7f0800fd
 int id match_constraint 0x7f0800fe
 int id match_parent 0x7f0800ff
@@ -2230,6 +2236,7 @@ int id progress_horizontal 0x7f08015a
 int id radio 0x7f08015b
 int id ratio 0x7f08015c
 int id rectangles 0x7f08015d
+int id reject_button 0x7f0801ff
 int id resultScreen 0x7f08015e
 int id resultText 0x7f08015f
 int id reverseSawtooth 0x7f080160
@@ -2237,6 +2244,8 @@ int id right 0x7f080161
 int id rightToLeft 0x7f080162
 int id right_icon 0x7f080163
 int id right_side 0x7f080164
+int id round_amount 0x7f080200
+int id round_text 0x7f080201
 int id rounded 0x7f080165
 int id row_index_key 0x7f080166
 int id save_non_transition_alpha 0x7f080167
@@ -2343,6 +2352,7 @@ int id title_template 0x7f0801cb
 int id toggle 0x7f0801cc
 int id top 0x7f0801cd
 int id topPanel 0x7f0801ce
+int id total_amount 0x7f080202
 int id touch_outside 0x7f0801cf
 int id transactionList 0x7f0801d0
 int id transactionTable 0x7f0801d1
@@ -2466,6 +2476,7 @@ int layout design_navigation_menu 0x7f0b002c
 int layout design_navigation_menu_item 0x7f0b002d
 int layout design_text_input_end_icon 0x7f0b002e
 int layout design_text_input_start_icon 0x7f0b002f
+int layout donation_screen 0x7f0b0078
 int layout material_chip_input_combo 0x7f0b0030
 int layout material_clock_display 0x7f0b0031
 int layout material_clock_display_divider 0x7f0b0032
