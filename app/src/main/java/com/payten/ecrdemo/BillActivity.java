@@ -538,6 +538,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        returnToMainScreen();
     }
 
     void showSystemScreen(){
