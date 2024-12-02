@@ -4,236 +4,48 @@
         "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_confirm.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_donut.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/donut.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_cupcake.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/cupcake.png"
-    },
-    {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
         "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxhdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_tango.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/tango.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_mdma.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/mdma.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_pearl.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/pearl.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_desire.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/desire.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_arrow_right.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_arrow_right.xml"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ecstasy.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ecstasy.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_heroin.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/heroin.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_master.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/master.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_moon.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/moon.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_zeppelin_iv.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/zeppelin_iv.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_cocaine.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/cocaine.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_diazepam.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/diazepam.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_heaven_hell.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/heaven_hell.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_sweets.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/sweets.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_crystal_meth.jpeg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/crystal_meth.jpeg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_hamburger.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/hamburger.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_sandwich.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/sandwich.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_beggars.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/beggars.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_methadone.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/methadone.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_launcher_background.xml"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xhdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_pancake.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/pancake.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_brothers.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/brothers.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_rivotril.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/rivotril.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-mdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-hdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_evt_script_text_outline.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/evt_script_text_outline.xml"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_cake_slice.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/cake_slice.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_donut_choco.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/donut_choco.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_activity_main.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/activity_main.xml"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_abbey.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/abbey.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_bromazepam.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/bromazepam.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-mdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_bollocks.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/bollocks.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_disintegration.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/disintegration.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_lollipop.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/lollipop.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_donut_pink.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/donut_pink.png"
     },
     {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_cancel.xml.flat",
         "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_cancel.xml"
     },
     {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_categories_screen.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/layout/categories_screen.xml"
+    },
+    {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "com.payten.ecrdemo.app-main-21:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_am.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/am.jpg"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_arrow_right.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_arrow_right.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_fried_chicken.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/fried_chicken.png"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_aladdin.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/aladdin.jpg"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_xanax.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/xanax.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_pizza.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/pizza.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_nevermind.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/nevermind.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_french_fries.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/french_fries.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_opera.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/opera.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_hashish.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/hashish.jpg"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_welcome_screen.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/layout/welcome_screen.xml"
     },
     {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_credit_card.xml.flat",
         "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_credit_card.xml"
+    },
+    {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_bill_screen.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/layout/bill_screen.xml"
+    },
+    {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_evt_replay.xml.flat",
@@ -244,79 +56,83 @@
         "source": "com.payten.ecrdemo.app-main-21:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_launcher_background.xml"
+    },
+    {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
         "source": "com.payten.ecrdemo.app-main-21:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_tramal.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/tramal.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_velvet.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/velvet.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_doors.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/doors.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_candies.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/candies.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_experienced.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/experienced.jpg"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_arrow_previous.xml.flat",
         "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_arrow_previous.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_macarons.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/macarons.png"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_system_screen.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/layout/system_screen.xml"
+    },
+    {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_charges_screen.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/layout/charges_screen.xml"
     },
     {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "com.payten.ecrdemo.app-main-21:/mipmap-mdpi/ic_launcher.webp"
     },
     {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_marijuana.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/marijuana.jpg"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-hdpi/ic_launcher.webp"
     },
     {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "com.payten.ecrdemo.app-main-21:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_morphine.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/morphine.jpg"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_proceed.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_proceed.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_meal.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/meal.png"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_chicken_bucket.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/chicken_bucket.png"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_maggot.jpg.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/maggot.jpg"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_hounds.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/hounds.png"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_evt_script_text_outline.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/drawable/evt_script_text_outline.xml"
     },
     {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ecrdemo.png.flat",
         "source": "com.payten.ecrdemo.app-main-21:/drawable/ecrdemo.png"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_hot_dog.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/hot_dog.png"
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_activity_main.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_result_screen.xml.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/layout/result_screen.xml"
+    },
+    {
+        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.payten.ecrdemo.app-main-21:/mipmap-mdpi/ic_launcher_foreground.webp"
     }
 ]

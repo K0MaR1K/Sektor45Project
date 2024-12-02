@@ -27,7 +27,7 @@
         android:testOnly="true"
         android:theme="@style/MainTheme" >
         <activity
-            android:name="com.payten.ecrdemo.MainActivity"
+            android:name="com.payten.ecrdemo.BillActivity"
             android:exported="true"
             android:launchMode="singleInstance" >
             <intent-filter>

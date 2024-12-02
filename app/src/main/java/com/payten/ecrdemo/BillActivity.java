@@ -62,7 +62,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 
-public class BillActivity extends AppCompatActivity implements View.OnClickListener/*, View.OnTouchListener*/ {
+public class BillActivity extends AppCompatActivity implements View.OnClickListener {
     public static Resources.Theme theme;
 
     public static final int ECR_NONE = 0;
@@ -75,7 +75,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
 
     class BillDataEntry{
-        public Integer itemId;
+        public String item;
+        public Float price;
         public Integer quantity;
     }
 
@@ -90,7 +91,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
     MainConfig mainConfig;
 
-    int[] buttonItems = new int[9];
 
     int buttonOffset = 0;
     ScrollView billText;
@@ -123,7 +123,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     ScrollView transScroll;
 
     ArrayList<ImageButton> voidButtons = new ArrayList<>();
-    ArrayList<ImageButton> itemButtons = new ArrayList<>();
 
     TextView settlement;
 
@@ -164,8 +163,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
-        btnPay = findViewById(R.id.button_Pay);
-        btnCancel = findViewById(R.id.button_Clear);
+        btnPay = findViewById(R.id.button_pay);
+        btnCancel = findViewById(R.id.button_back);
 
 
         btnPay.setOnClickListener(this);
@@ -389,7 +388,8 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         return json;
     }
 
-    void addItemToBill(Integer itemIndex){
+    // WHEN THIS ACTIVITY IS LOADED USE THIS FOR EACH ITEM TO ADD IT TO BILL ->
+    void addItemToBill(String item, Float price){
         settingsClickTimer = 0;
         settingsClickCount = 0;
 
@@ -398,7 +398,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         Integer quantity = 1;
 
         for (BillDataEntry b: billDataEntryList) {
-            if (b.itemId.equals(itemIndex)){
+            if (b.item.equals(item)){
                 // Item already added - increment quantity, delete from list
                 quantity = b.quantity + 1;
                 billDataEntryList.remove(b);
@@ -408,10 +408,11 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
 
         // Add item at the bottom of the list
         BillDataEntry newItem = new BillDataEntry();
-        newItem.itemId = itemIndex;
+        newItem.item = item;
+        newItem.price = price;
         newItem.quantity = quantity;
         billDataEntryList.add(newItem);
-        BigDecimal amt = new BigDecimal(mainConfig.items.get(itemIndex).itemPrice);
+        BigDecimal amt = new BigDecimal(price);
         billTotal = billTotal.add(amt);
     }
 
@@ -910,7 +911,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     void setBillTableData(){
-        itemButtons = new ArrayList<>();
         int i = 0;
         for (BillDataEntry bd: billDataEntryList) {
             int color;
@@ -920,7 +920,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
                 color = getColor(R.color.light_gray);
             }
             i++;
-            BigDecimal itemTotal = new BigDecimal(mainConfig.items.get(bd.itemId).itemPrice);
+            BigDecimal itemTotal = new BigDecimal(bd.price);
             itemTotal = itemTotal.multiply(new BigDecimal(bd.quantity));
 
             TableRow tr=new TableRow(this);
@@ -928,7 +928,7 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             tr.setBackgroundColor(color);
 
             TextView b=new TextView(this);
-            String str=String.valueOf(mainConfig.items.get(bd.itemId).itemName);
+            String str=String.valueOf(bd.item);
             b.setText(str);
             b.setTextSize(12);
             tr.addView(b);
@@ -954,7 +954,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             tr.addView(i1);
 
             i1.setOnClickListener(this);
-            itemButtons.add(i1);
 
             billTable.addView(tr);
         }
@@ -1012,21 +1011,21 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         btnCancel.setVisibility(View.INVISIBLE);
 
         billTable.removeAllViewsInLayout();
-        itemButtons = new ArrayList<>();
     }
 
     @Override
     public void onClick(View v){
         int id = v.getId();
 
-        if (id == R.id.button_Clear){
-            btnPay.setVisibility(View.INVISIBLE);
+        if (id == R.id.button_back){
+            // TODO: GO BACK TO CATEGORIES SCREEN
+            // ERASE ->
+            /* btnPay.setVisibility(View.INVISIBLE);
             btnCancel.setVisibility(View.INVISIBLE);
-            itemButtons = new ArrayList<>();
             billTotal = BigDecimal.ZERO;
-            billDataEntryList.clear();
+            billDataEntryList.clear(); */
         }
-        else if (id == R.id.button_Pay){
+        else if (id == R.id.button_pay){
             showResultScreen(true);
             performPayment();
         }
@@ -1061,12 +1060,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
             // Void selected transaction
             showResultScreen(true);
             performVoid(MyApp.transactionList.get(voidButtons.indexOf(v)));
-        }
-        else if (itemButtons.contains(v)){
-            // Remove selected item
-            billTotal = billTotal.subtract(new BigDecimal(mainConfig.items.get(billDataEntryList.get(itemButtons.indexOf(v)).itemId).itemPrice).multiply(new BigDecimal(billDataEntryList.get(itemButtons.indexOf(v)).quantity)));
-            billDataEntryList.remove(itemButtons.indexOf(v));
-            itemButtons.remove(v);
         }
         else if (id == R.id.settlement){
             showResultScreen(true);
@@ -1103,7 +1096,6 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         }
         else {
             billTable.removeAllViewsInLayout();
-            itemButtons = new ArrayList<>();
 
             btnPay.setVisibility(View.INVISIBLE);
             btnCancel.setVisibility(View.INVISIBLE);
@@ -1163,9 +1155,9 @@ public class BillActivity extends AppCompatActivity implements View.OnClickListe
         addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "================================");
 
         for (BillDataEntry bd: billDataEntryList) {
-            BigDecimal itemTotal = new BigDecimal(mainConfig.items.get(bd.itemId).itemPrice).multiply(new BigDecimal(bd.quantity));
+            BigDecimal itemTotal = new BigDecimal(bd.price).multiply(new BigDecimal(bd.quantity));
 
-            addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, String.valueOf(mainConfig.items.get(bd.itemId).itemName));
+            addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, String.valueOf(bd.item));
             addLine(lines, EcrDef.lineTypeText, EcrDef.lineStyleNormal, "  " + String.valueOf(bd.quantity) + "                                ".substring(0, 30 - String.valueOf(bd.quantity).length() - formatAmount(itemTotal, true).length()) + formatAmount(itemTotal, true));
         }
 
