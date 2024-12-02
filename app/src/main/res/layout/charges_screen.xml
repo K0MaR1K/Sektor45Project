@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/charges_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/colorSecondary"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/choose_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="Neplaćene takse:"/>
+
+        <ScrollView
+            android:id="@+id/charges_view"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginVertical="25dp">
+
+        </ScrollView>
+
+        <ImageButton
+            android:id="@+id/go_to_bill_activity_button"
+            android:layout_width="75dp"
+            android:layout_height="75dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>
