@@ -10,6 +10,7 @@
     <color name="teal">#055757</color>
     <color name="teal_light">#04BCAA</color>
     <color name="anthracite">#23263c</color>
+    <color name="light_anthracite">#1BFFFFFF</color>
     <color name="dark_gray">#191C2F</color>
     <color name="gray">#5E5E5E</color>
     <color name="medium_gray">#C7C7C7</color>

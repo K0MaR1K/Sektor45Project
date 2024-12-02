@@ -1164,6 +1164,7 @@ color gray
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_anthracite
 color light_gray
 color light_green
 color light_purple
@@ -1838,6 +1839,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_proceed
 drawable kazne_button
 drawable logo_button
+drawable logo_button1
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1877,6 +1879,7 @@ drawable reg_button
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable unicef_logo
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2002,10 +2005,6 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id charges_item
-id charges_item_date
-id charges_item_name
-id charges_item_price
 id charges_screen
 id charges_scrollView
 id charges_text
@@ -2060,9 +2059,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
-id donation_image
 id donation_screen
-id donation_text
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2246,7 +2243,6 @@ id rightToLeft
 id right_icon
 id right_side
 id round_amount
-id round_text
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -2459,7 +2455,6 @@ layout abc_tooltip
 layout activity_main
 layout bill_screen
 layout categories_screen
-layout charges_item
 layout charges_screen
 layout custom_dialog
 layout design_bottom_navigation_item

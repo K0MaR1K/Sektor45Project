@@ -1,4 +1,4 @@
-#Mon Dec 02 22:12:01 CET 2024
+#Tue Dec 03 00:02:11 CET 2024
 base.0=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\User20\\Documents\\GitHub\\Sektor45Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
