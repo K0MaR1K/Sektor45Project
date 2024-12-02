@@ -1,138 +1,142 @@
 [
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_confirm.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_confirm.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_confirm.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_confirm.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_cancel.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_cancel.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_system_screen.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\system_screen.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_categories_screen.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/categories_screen.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_arrow_right.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_arrow_right.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_charges_screen.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\charges_screen.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_arrow_right.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_arrow_right.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_welcome_screen.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/welcome_screen.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_credit_card.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_credit_card.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_categories_screen.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\categories_screen.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_bill_screen.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/bill_screen.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_cancel.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_cancel.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_evt_replay.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/evt_replay.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ecrdemo.png.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ecrdemo.png"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_arrow_previous.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_arrow_previous.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_evt_script_text_outline.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\evt_script_text_outline.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-hdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xhdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_bill_screen.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\bill_screen.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_arrow_previous.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_arrow_previous.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_evt_replay.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\evt_replay.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_credit_card.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_credit_card.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_system_screen.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/system_screen.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_charges_screen.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/charges_screen.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_result_screen.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\result_screen.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-hdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ic_proceed.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ic_proceed.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-mdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_evt_script_text_outline.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/evt_script_text_outline.xml"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\layout_welcome_screen.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\layout\\welcome_screen.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/drawable_ecrdemo.png.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/drawable/ecrdemo.png"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_activity_main.xml.flat",
         "source": "com.payten.ecrdemo.app-main-21:/layout/activity_main.xml"
     },
     {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/layout_result_screen.xml.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/layout/result_screen.xml"
-    },
-    {
-        "merged": "com.payten.ecrdemo.app-merged_res-19:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.payten.ecrdemo.app-main-21:/mipmap-mdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-merged_res-19:\\drawable_ic_proceed.xml.flat",
+        "source": "C:\\Users\\markm\\.gradle\\daemon\\7.5\\com.payten.ecrdemo.app-main-21:\\drawable\\ic_proceed.xml"
     }
 ]

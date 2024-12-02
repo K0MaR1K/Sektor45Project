@@ -1951,8 +1951,6 @@ int id animateToEnd 0x7f08004e
 int id animateToStart 0x7f08004f
 int id antiClockwise 0x7f080050
 int id anticipate 0x7f080051
-int id appTypes 0x7f080052
-int id applicationTypeTitle 0x7f080053
 int id arc 0x7f080054
 int id asConfigured 0x7f080055
 int id async 0x7f080056
