@@ -1,86 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:id="@+id/categories_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSecondary"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:id="@+id/categories_screen"
+    <TextView
+        android:id="@+id/choose_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:text="Odaberite željenu kategoriju:"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="?attr/colorSecondary"
-        android:gravity="center"
-        >
+        android:layout_height="wrap_content"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="20dp">
 
-        <TextView
-            android:id="@+id/choose_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textColor="@color/white"
-            android:text="Odaberite željenu kategoriju:"/>
+        <ImageButton
+            android:id="@+id/button_1"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="?attr/colorButtonNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button_3"
+            />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="15dp"
-            android:paddingHorizontal="20dp">
+        <ImageButton
+            android:id="@+id/button_2"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="?attr/colorButtonNormal"
+            app:layout_constraintStart_toEndOf="@id/button_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button_4"
+            />
 
-            <ImageButton
-                android:id="@+id/button_1"
-                android:layout_width="170dp"
-                android:layout_height="130dp"
-                android:padding="20dp"
-                android:scaleType="fitCenter"
-                android:backgroundTint="?attr/colorButtonNormal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/button_2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/button_3"
-                />
+        <ImageButton
+            android:id="@+id/button_3"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="?attr/colorButtonNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_4"
+            app:layout_constraintTop_toBottomOf="@id/button_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
-            <ImageButton
-                android:id="@+id/button_2"
-                android:layout_width="170dp"
-                android:layout_height="130dp"
-                android:padding="20dp"
-                android:scaleType="fitCenter"
-                android:backgroundTint="?attr/colorButtonNormal"
-                app:layout_constraintStart_toEndOf="@id/button_1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/button_4"
-                />
+        <ImageButton
+            android:id="@+id/button_4"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="?attr/colorButtonNormal"
+            app:layout_constraintStart_toEndOf="@id/button_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
-            <ImageButton
-                android:id="@+id/button_3"
-                android:layout_width="170dp"
-                android:layout_height="130dp"
-                android:padding="20dp"
-                android:scaleType="fitCenter"
-                android:backgroundTint="?attr/colorButtonNormal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/button_4"
-                app:layout_constraintTop_toBottomOf="@id/button_1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageButton
-                android:id="@+id/button_4"
-                android:layout_width="170dp"
-                android:layout_height="130dp"
-                android:padding="20dp"
-                android:scaleType="fitCenter"
-                android:backgroundTint="?attr/colorButtonNormal"
-                app:layout_constraintStart_toEndOf="@id/button_3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button_2"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
-
-</FrameLayout>
+</LinearLayout>

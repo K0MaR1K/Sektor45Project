@@ -34,6 +34,7 @@
 
         <ImageButton
             android:id="@+id/go_to_bill_activity_button"
+            android:src="@drawable/ic_proceed"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:visibility="gone"/>
