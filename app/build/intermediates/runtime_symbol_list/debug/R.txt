@@ -1834,6 +1834,7 @@ int drawable ic_mtrl_chip_checked_black 0x7f070071
 int drawable ic_mtrl_chip_checked_circle 0x7f070072
 int drawable ic_mtrl_chip_close_circle 0x7f070073
 int drawable ic_proceed 0x7f070074
+int drawable kazne_button 0x7f070099
 int drawable material_cursor_drawable 0x7f070075
 int drawable material_ic_calendar_black_24dp 0x7f070076
 int drawable material_ic_clear_black_24dp 0x7f070077
@@ -1867,6 +1868,9 @@ int drawable notification_template_icon_bg 0x7f070092
 int drawable notification_template_icon_low_bg 0x7f070093
 int drawable notification_tile_bg 0x7f070094
 int drawable notify_panel_notification_icon_bg 0x7f070095
+int drawable ostalo_button 0x7f07009a
+int drawable porezi_button 0x7f07009b
+int drawable reg_button 0x7f07009c
 int drawable test_custom_background 0x7f070096
 int drawable tooltip_frame_dark 0x7f070097
 int drawable tooltip_frame_light 0x7f070098
